@@ -44,13 +44,17 @@ RCS_ID("$Id$");
             break;
         case OUIViewControllerVisibilityAppearing:
             // If *we* are in the middle of appearing, we have to pass this instead of 'animated' to avoid assertion in -viewDidAppear:.
-            [child viewWillAppear:_lastChangeAnimated];
+            if([[[UIDevice currentDevice] systemVersion] intValue] < 5){
+                [child viewWillAppear:_lastChangeAnimated];
+            }
             // we'll send -viewDidAppear: when we get it ourselves
             break;
         case OUIViewControllerVisibilityVisible:
             // need to send both
-            [child viewWillAppear:animated];
-            [child viewDidAppear:animated];
+            if([[[UIDevice currentDevice] systemVersion] intValue] < 5){
+                [child viewWillAppear:animated];
+                [child viewDidAppear:animated];
+            }
             break;
         case OUIViewControllerVisibilityDisappearing:
             // The child should already have an effective 'hidden' state.
@@ -110,7 +114,9 @@ RCS_ID("$Id$");
     [super viewWillAppear:animated];
     
     for (UIViewController *child in _children)
-        [child viewWillAppear:animated];
+        if([[[UIDevice currentDevice] systemVersion] intValue] < 5){
+            [child viewWillAppear:animated];
+        }
 }
 
 - (void)viewDidAppear:(BOOL)animated;
@@ -123,7 +129,9 @@ RCS_ID("$Id$");
     [super viewDidAppear:animated];
     
     for (UIViewController *child in _children)
-        [child viewDidAppear:animated];
+        if([[[UIDevice currentDevice] systemVersion] intValue] < 5){
+            [child viewDidAppear:animated];
+        }
 }
 
 - (void)viewWillDisappear:(BOOL)animated;
@@ -136,7 +144,9 @@ RCS_ID("$Id$");
     [super viewWillDisappear:animated];
     
     for (UIViewController *child in _children)
-        [child viewWillDisappear:animated];
+        if([[[UIDevice currentDevice] systemVersion] intValue] < 5){
+            [child viewWillDisappear:animated];
+        }
 }
 
 - (void)viewDidDisappear:(BOOL)animated;
@@ -149,7 +159,9 @@ RCS_ID("$Id$");
     [super viewDidDisappear:animated];
     
     for (UIViewController *child in _children)
-        [child viewDidDisappear:animated];
+        if([[[UIDevice currentDevice] systemVersion] intValue] < 5){
+            [child viewDidDisappear:animated];
+        }
 }
 
 @end

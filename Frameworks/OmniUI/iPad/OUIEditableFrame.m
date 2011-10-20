@@ -256,7 +256,7 @@ static id do_init(OUIEditableFrame *self)
 
     self->isRegisteredForScrollNotifications = NO;
     
-    self->editMenu = [[[OUIEditMenuController alloc] initWithEditableFrame:self] retain];
+    self->editMenu = [[OUIEditMenuController alloc] initWithEditableFrame:self];
     
     // We lazily initialize some attributes in didMoveToWindow.
     return self;
@@ -3220,16 +3220,12 @@ static NSUInteger moveVisuallyWithinLine(CTLineRef line, CFStringRef base, NSUIn
 /* Writing direction */
 - (UITextWritingDirection)baseWritingDirectionForPosition:(UITextPosition *)position inDirection:(UITextStorageDirection)direction;
 {
-    /* TODO: Implement this */
-    btrace();
-    abort();    
+    return UITextWritingDirectionNatural;   
 }
 
 - (void)setBaseWritingDirection:(UITextWritingDirection)writingDirection forRange:(UITextRange *)range;
 {
-    /* TODO: Implement this */
-    btrace();
-    abort();
+  
 }    
 
 /* Geometry used to provide, for example, a correction rect. */
@@ -3354,7 +3350,7 @@ CGRect OUITextLayoutFirstRectForRange(CTFrameRef frame, NSRange characterRange)
     else if (direction == UITextStorageDirectionBackward && index > 0)
         ctStyles = [_content attributesAtIndex:index-1 effectiveRange:NULL];
     else
-        ctStyles = [_content attributesAtIndex:index effectiveRange:NULL];
+        ctStyles = [_content attributesAtIndex:index-1 effectiveRange:NULL];
     
 
     NSMutableDictionary *uiStyles = [ctStyles mutableCopy];
