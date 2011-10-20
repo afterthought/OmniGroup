@@ -235,20 +235,20 @@ void OUIDocumentProxyDrawPreview(CGContextRef ctx, OUIDocumentPDFPreview *pdfPre
         CGContextConcatCTM(ctx, xform); // size the page to the target rect we wanted
         
         // Some temporary code so that stencils can be semi-transparent
-        NSString *name = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
-        if (!name || ![name isEqualToString:@"OmniGraffle"] || !pdfPreview) {
-            // Newer OGS builds emit transparent backgrounds.  Make sure our preview appear atop something.
-            CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceGray();
-            CGFloat alpha = pdfPreview != nil ? 1.0 : 0.2;
-            CGFloat whiteComponents[] = {1.0, alpha};
-            CGColorRef white = CGColorCreate(colorSpace, whiteComponents);
-            CGContextSetFillColorWithColor(ctx, white);
-            CGColorRelease(white);
-            
-            CGColorSpaceRelease(colorSpace);
-            
-            CGContextFillRect(ctx, paperRect);
-        }
+//        NSString *name = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
+//        if (!name || ![name isEqualToString:@"OmniGraffle"] || !pdfPreview) {
+//            // Newer OGS builds emit transparent backgrounds.  Make sure our preview appear atop something.
+//            CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceGray();
+//            CGFloat alpha = pdfPreview != nil ? 1.0 : 0.2;
+//            CGFloat whiteComponents[] = {1.0, alpha};
+//            CGColorRef white = CGColorCreate(colorSpace, whiteComponents);
+//            CGContextSetFillColorWithColor(ctx, white);
+//            CGColorRelease(white);
+//            
+//            CGColorSpaceRelease(colorSpace);
+//            
+//            CGContextFillRect(ctx, paperRect);
+//        }
         
         if (pdfPreview) {
             // the PDF is happy to draw outside its page rect.
