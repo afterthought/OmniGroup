@@ -41,7 +41,7 @@ NSString * const OUIKeyboardAnimationInhibition = @"OUIKeyboardAnimationInhibiti
     if (self) {
         // Initialization code here.
         inhibitions = [[NSMutableSet alloc] init];
-        unretained_editor = [editableFrame retain];
+        unretained_editor = editableFrame;
         wantMainMenuDisplay = NO;
         needsToShowMainMenuAfterCurrentMenuFinishesHiding = NO;
         
