@@ -10,7 +10,7 @@
 #import <UIKit/UIViewController.h>
 #import <OmniUI/OUIScrollNotifier.h>
 
-#define OUI_SNAP_TO_ZOOM_PERCENT (0.1)
+#define OUI_SNAP_TO_ZOOM_PERCENT (0.0)
 
 @class OUIScalingScrollView, OUIOverlayView;
 @protocol UIScrollViewDelegate;
