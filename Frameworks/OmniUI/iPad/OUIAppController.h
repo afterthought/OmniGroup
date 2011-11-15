@@ -42,6 +42,9 @@
     
     UIPopoverController *_possiblyVisiblePopoverController;
     UIBarButtonItem *_possiblyTappedButtonItem;
+    
+    UIView *_possiblyTappedInView;
+    UIButton *_possiblyTappedButton;
 }
 
 + (id)controller;
@@ -71,6 +74,7 @@
 
 // Popover Helpers
 // Present all popovers via this API to help avoid popovers having to know about one another to avoid multiple popovers on screen.
+-(BOOL)presentPopover:(UIPopoverController *)popover fromButton:(UIButton *)aButton inView:(UIView *)view permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections animated:(BOOL)animated;
 - (BOOL)presentPopover:(UIPopoverController *)popover fromRect:(CGRect)rect inView:(UIView *)view permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections animated:(BOOL)animated;
 - (BOOL)presentPopover:(UIPopoverController *)popover fromBarButtonItem:(UIBarButtonItem *)item permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections animated:(BOOL)animated;
 - (void)dismissPopover:(UIPopoverController *)popover animated:(BOOL)animated; // If the popover in question is not visible, does nothing. DOES send the 'did' delegate method, unlike the plain UIPopoverController method (see the implementation for reasoning)

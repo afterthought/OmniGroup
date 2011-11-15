@@ -475,8 +475,21 @@ static BOOL _dismissVisiblePopoverInFavorOfPopover(OUIAppController *self, UIPop
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {
     if (_possiblyTappedButtonItem && _possiblyVisiblePopoverController.popoverVisible) {
-        [self presentPopover:_possiblyVisiblePopoverController fromBarButtonItem:_possiblyTappedButtonItem permittedArrowDirections:[_possiblyVisiblePopoverController popoverArrowDirection] animated:NO];
+        [self presentPopover:_possiblyVisiblePopoverController fromBarButtonItem:_possiblyTappedButtonItem permittedArrowDirections:UIPopoverArrowDirectionAny animated:NO];
     }
+    else if (_possiblyTappedButton && _possiblyVisiblePopoverController.popoverVisible) {
+        [self presentPopover:_possiblyVisiblePopoverController fromButton:_possiblyTappedButton inView:_possiblyTappedInView permittedArrowDirections:UIPopoverArrowDirectionAny animated:NO];
+    }
+}
+
+-(BOOL)presentPopover:(UIPopoverController *)popover fromButton:(UIButton *)aButton inView:(UIView *)view permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections animated:(BOOL)animated {
+    
+    [_possiblyTappedButton release];
+    _possiblyTappedButton = [aButton retain];
+    [_possiblyTappedInView release];
+    _possiblyTappedInView = [view retain];
+    
+    return [self presentPopover:popover fromRect:aButton.frame inView:view permittedArrowDirections:arrowDirections animated:animated];
 }
 
 // Returns NO without displaying the popover, if a previously displayed popover refuses to be dismissed.
@@ -487,8 +500,10 @@ static BOOL _dismissVisiblePopoverInFavorOfPopover(OUIAppController *self, UIPop
     if (!_dismissVisiblePopoverInFavorOfPopover(self, popover, animated))
         return NO;
     
-    OBASSERT(_possiblyVisiblePopoverController == nil);
-    _possiblyVisiblePopoverController = [popover retain];
+     if (_possiblyVisiblePopoverController != popover) { // Might be re-displaying a popover after an orientation 
+         OBASSERT(_possiblyVisiblePopoverController == nil);
+        _possiblyVisiblePopoverController = [popover retain];
+     }
     
     [popover presentPopoverFromRect:rect inView:view permittedArrowDirections:arrowDirections animated:animated];
     return YES;
@@ -526,6 +541,9 @@ static BOOL _dismissVisiblePopoverInFavorOfPopover(OUIAppController *self, UIPop
     _forgetPossiblyVisiblePopoverIfAlreadyHidden(self);
     [_possiblyTappedButtonItem release];
     _possiblyTappedButtonItem = nil;
+    
+    [_possiblyTappedButton release], _possiblyTappedButton = nil;
+    [_possiblyTappedInView release], _possiblyTappedInView = nil;
     
     if (!_possiblyVisiblePopoverController || popover != _possiblyVisiblePopoverController)
         return;

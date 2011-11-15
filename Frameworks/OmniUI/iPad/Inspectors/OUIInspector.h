@@ -58,6 +58,7 @@ extern NSString * const OUIInspectorDidEndChangingInspectedObjectsNotification;
 
 @property(readonly,nonatomic,getter=isVisible) BOOL visible;
 
+- (BOOL)inspectObjects:(NSArray *)objects fromButton:(UIButton *)aButton inView:(UIView *)view permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections;
 - (BOOL)inspectObjects:(NSArray *)objects fromBarButtonItem:(UIBarButtonItem *)item;
 - (BOOL)inspectObjects:(NSArray *)objects fromRect:(CGRect)rect inView:(UIView *)view permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections;
 - (void)updateInterfaceFromInspectedObjects:(OUIInspectorUpdateReason)reason; // If you wrap edits in the will/did change methods below, this will be called automatically on the 'did'.

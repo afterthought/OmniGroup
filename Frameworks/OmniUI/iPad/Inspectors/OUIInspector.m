@@ -193,6 +193,21 @@ NSString * const OUIInspectorDidEndChangingInspectedObjectsNotification = @"OUII
     return YES;
 }
 
+- (BOOL)inspectObjects:(NSArray *)objects fromButton:(UIButton *)aButton inView:(UIView *)view permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections;
+{    
+    if (![self _prepareToInspectObjects:objects])
+        return NO;
+    
+    // In the embedding case, the 'from whatever' arguments are irrelevant. We assumed the embedding navigation controller is going to be made visibiel somehow.
+    if ([self isEmbededInOtherNavigationController] == NO) {
+        if (![[OUIAppController controller] presentPopover:_popoverController fromButton:aButton inView:view permittedArrowDirections:arrowDirections animated:YES])
+            return NO;
+    }
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:OUIInspectorDidPresentNotification object:self];
+    return YES;
+}
+
 - (BOOL)inspectObjects:(NSArray *)objects fromRect:(CGRect)rect inView:(UIView *)view permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections;
 {    
     if (![self _prepareToInspectObjects:objects])
