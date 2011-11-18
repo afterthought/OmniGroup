@@ -138,6 +138,7 @@
 
 - (BOOL)endEditing;
 
+@property (nonatomic, readwrite, retain) NSDictionary *defaultAttributes;      /* Overrides other defaults if set */
 @property (nonatomic, readwrite, retain) UIColor *textColor;                   /* Applied to any runs lacking kCTForegroundColorAttributeName */
 @property (nonatomic, readwrite) CTFontRef defaultCTFont;                      /* Applied to any runs lacking kCTFontAttributeName */
 @property (nonatomic, readwrite) CTParagraphStyleRef defaultCTParagraphStyle;  /* Applied to any runs lacking kCTParagraphStyleAttributeName */

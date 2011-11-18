@@ -115,6 +115,7 @@ NSString * const OUIScrollingMenuInhibition = @"OUIScrollingMenuInhibition";
 - (void)_moveInDirection:(UITextLayoutDirection)direction;
 - (UIView *)_topmostView;
 - (NSAttributedString *)_attributedTextInRange:(UITextRange *)range;
+- (NSDictionary *)_allDefaultAttributes;
 @end
 
 @implementation OUIEditableFrame
@@ -1228,6 +1229,8 @@ static BOOL _rangeIsInsertionPoint(OUIEditableFrame *self, UITextRange *r)
     [self setNeedsDisplay];
 }
 
+@synthesize defaultAttributes;
+
 - (void)setDefaultCTFont:(CTFontRef)newFont
 {
     if (!newFont)
@@ -2151,8 +2154,8 @@ static BOOL _recognizerTouchedView(UIGestureRecognizer *recognizer, UIView *view
     OUITextLayoutFixupParagraphStyles(_content);
     
     /* Set default font, color, and paragraph styles on any runs that don't have them. */
-    if (defaultFont || textColor || defaultParagraphStyle) {
-        CGColorRef textCGColor = [textColor CGColor];
+    NSDictionary *defaults = [self _allDefaultAttributes];
+    if (defaults && [defaults count] > 0) {
         NSUInteger contentLength = [_content length];
         NSRange cursor;
         cursor.location = 0;
@@ -2160,14 +2163,12 @@ static BOOL _recognizerTouchedView(UIGestureRecognizer *recognizer, UIView *view
         while (cursor.location < contentLength) {
             NSDictionary *run = [_content attributesAtIndex:cursor.location effectiveRange:&cursor];
             
-            if (defaultFont && ![run objectForKey:(id)kCTFontAttributeName])
-                [_content addAttribute:(id)kCTFontAttributeName value:(id)defaultFont range:cursor];
-            if (textCGColor && ![run objectForKey:(id)kCTForegroundColorAttributeName])
-                [_content addAttribute:(id)kCTForegroundColorAttributeName value:(id)textCGColor range:cursor];
-            if (defaultParagraphStyle && ![run objectForKey:(id)kCTParagraphStyleAttributeName])
-                [_content addAttribute:(id)kCTParagraphStyleAttributeName value:(id)defaultParagraphStyle range:cursor];
-
-            cursor.location += cursor.length;
+            for (id key in defaults.allKeys) {
+                id attribute = [defaults objectForKey:key];
+                if (attribute && ![run objectForKey:key])
+                    [_content addAttribute:key value:attribute range:cursor];
+            }   
+            cursor.location += cursor.length; 
         }
     }
 }
@@ -2237,6 +2238,11 @@ static BOOL _recognizerTouchedView(UIGestureRecognizer *recognizer, UIView *view
 
 - (NSDictionary *)_allDefaultAttributes;
 {
+    // Allow an override of arbitrary attributes so as not to be limited by the 3 explicit options
+    if (defaultAttributes) {
+        return defaultAttributes;
+    }
+    
     NSMutableDictionary *allDefaultAttributes = [NSMutableDictionary dictionary];
     if (defaultParagraphStyle != nil)
         [allDefaultAttributes setObject:(id)defaultParagraphStyle forKey:(id)kCTParagraphStyleAttributeName];
