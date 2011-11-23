@@ -3062,6 +3062,158 @@
 			};
 			name = Coverage;
 		};
+		45AE3F90147D63E700CE3131 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AB8F09D08AD0A0600DBB061 /* Omni-Global-Release.xcconfig */;
+			buildSettings = {
+			};
+			name = AdHoc;
+		};
+		45AE3F91147D63E700CE3131 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AA1EBD208AA772700E2FF6B /* Omni-Framework-Release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = Info.plist;
+				OMNI_BUNDLE_IDENTIFIER = com.omnigroup.OmniAppKit;
+				PRODUCT_NAME = OmniAppKit;
+				SECTORDER_FLAGS = (
+					"-sectorder",
+					__TEXT,
+					__text,
+					"$(PRODUCT_NAME).order",
+				);
+			};
+			name = AdHoc;
+		};
+		45AE3F92147D63E700CE3131 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AB8F09A08AD0A0600DBB061 /* Omni-Bundle-Release.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR_QUOTED)",
+				);
+				GCC_PREFIX_HEADER = Tests/UnitTests/OAUnitTests_Prefix.h;
+				INFOPLIST_FILE = "Info-OAUnitTests.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(DEVELOPER_FRAMEWORKS_DIR)";
+				PRODUCT_NAME = OAUnitTests;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = AdHoc;
+		};
+		45AE3F93147D63E700CE3131 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AA1EBD508AA772700E2FF6B /* Omni-Tool-Release.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = OAMakeImageSizeIntegral;
+			};
+			name = AdHoc;
+		};
+		45AE3F94147D63E700CE3131 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AB8F09A08AD0A0600DBB061 /* Omni-Bundle-Release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "Info-OAPatternColorPicker.plist";
+				PRODUCT_NAME = OAPatternColorPicker;
+			};
+			name = AdHoc;
+		};
+		45AE3F95147D63E700CE3131 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3434792711923B69007D0CE5 /* Touch-Library-Release.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = OmniAppKit;
+			};
+			name = AdHoc;
+		};
+		45AE3F96147D63E700CE3131 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3434792711923B69007D0CE5 /* Touch-Library-Release.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_DIR)/Library/Frameworks",
+					"$(value)",
+				);
+				PRODUCT_NAME = OmniAppKitTouchTests;
+			};
+			name = AdHoc;
+		};
+		45AE3F98147D63EE00CE3131 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AB8F09D08AD0A0600DBB061 /* Omni-Global-Release.xcconfig */;
+			buildSettings = {
+			};
+			name = AppStore;
+		};
+		45AE3F99147D63EE00CE3131 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AA1EBD208AA772700E2FF6B /* Omni-Framework-Release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = Info.plist;
+				OMNI_BUNDLE_IDENTIFIER = com.omnigroup.OmniAppKit;
+				PRODUCT_NAME = OmniAppKit;
+				SECTORDER_FLAGS = (
+					"-sectorder",
+					__TEXT,
+					__text,
+					"$(PRODUCT_NAME).order",
+				);
+			};
+			name = AppStore;
+		};
+		45AE3F9A147D63EE00CE3131 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AB8F09A08AD0A0600DBB061 /* Omni-Bundle-Release.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR_QUOTED)",
+				);
+				GCC_PREFIX_HEADER = Tests/UnitTests/OAUnitTests_Prefix.h;
+				INFOPLIST_FILE = "Info-OAUnitTests.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(DEVELOPER_FRAMEWORKS_DIR)";
+				PRODUCT_NAME = OAUnitTests;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = AppStore;
+		};
+		45AE3F9B147D63EE00CE3131 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AA1EBD508AA772700E2FF6B /* Omni-Tool-Release.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = OAMakeImageSizeIntegral;
+			};
+			name = AppStore;
+		};
+		45AE3F9C147D63EE00CE3131 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AB8F09A08AD0A0600DBB061 /* Omni-Bundle-Release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "Info-OAPatternColorPicker.plist";
+				PRODUCT_NAME = OAPatternColorPicker;
+			};
+			name = AppStore;
+		};
+		45AE3F9D147D63EE00CE3131 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3434792711923B69007D0CE5 /* Touch-Library-Release.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = OmniAppKit;
+			};
+			name = AppStore;
+		};
+		45AE3F9E147D63EE00CE3131 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3434792711923B69007D0CE5 /* Touch-Library-Release.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_DIR)/Library/Frameworks",
+					"$(value)",
+				);
+				PRODUCT_NAME = OmniAppKitTouchTests;
+			};
+			name = AppStore;
+		};
 		4A4E085708AA75E90098FF0F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4AB8F09C08AD0A0600DBB061 /* Omni-Global-Debug.xcconfig */;
@@ -3238,6 +3390,8 @@
 			buildConfigurations = (
 				3401163611E5181A0016ADB3 /* Debug */,
 				3401163711E5181A0016ADB3 /* Release */,
+				45AE3F9E147D63EE00CE3131 /* AppStore */,
+				45AE3F96147D63E700CE3131 /* AdHoc */,
 				3401163811E5181A0016ADB3 /* Coverage */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -3248,6 +3402,8 @@
 			buildConfigurations = (
 				3434791611923B54007D0CE5 /* Debug */,
 				3434791711923B54007D0CE5 /* Release */,
+				45AE3F9D147D63EE00CE3131 /* AppStore */,
+				45AE3F95147D63E700CE3131 /* AdHoc */,
 				3434791811923B54007D0CE5 /* Coverage */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -3258,6 +3414,8 @@
 			buildConfigurations = (
 				4A4E085708AA75E90098FF0F /* Debug */,
 				4A4E085808AA75E90098FF0F /* Release */,
+				45AE3F98147D63EE00CE3131 /* AppStore */,
+				45AE3F90147D63E700CE3131 /* AdHoc */,
 				4A4E085908AA75E90098FF0F /* Coverage */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -3268,6 +3426,8 @@
 			buildConfigurations = (
 				4AA1E7F408AA764600E2FF6B /* Debug */,
 				4AA1E7F508AA764600E2FF6B /* Release */,
+				45AE3F99147D63EE00CE3131 /* AppStore */,
+				45AE3F91147D63E700CE3131 /* AdHoc */,
 				4AA1E7F608AA764600E2FF6B /* Coverage */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -3278,6 +3438,8 @@
 			buildConfigurations = (
 				4AA1E80C08AA764600E2FF6B /* Debug */,
 				4AA1E80D08AA764600E2FF6B /* Release */,
+				45AE3F9A147D63EE00CE3131 /* AppStore */,
+				45AE3F92147D63E700CE3131 /* AdHoc */,
 				4AA1E80E08AA764600E2FF6B /* Coverage */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -3288,6 +3450,8 @@
 			buildConfigurations = (
 				4AA1E81A08AA764700E2FF6B /* Debug */,
 				4AA1E81B08AA764700E2FF6B /* Release */,
+				45AE3F9B147D63EE00CE3131 /* AppStore */,
+				45AE3F93147D63E700CE3131 /* AdHoc */,
 				4AA1E81C08AA764700E2FF6B /* Coverage */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -3298,6 +3462,8 @@
 			buildConfigurations = (
 				4AA1E82708AA764700E2FF6B /* Debug */,
 				4AA1E82808AA764700E2FF6B /* Release */,
+				45AE3F9C147D63EE00CE3131 /* AppStore */,
+				45AE3F94147D63E700CE3131 /* AdHoc */,
 				4AA1E82908AA764700E2FF6B /* Coverage */,
 			);
 			defaultConfigurationIsVisible = 0;

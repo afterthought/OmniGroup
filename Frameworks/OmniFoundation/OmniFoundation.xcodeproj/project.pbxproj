@@ -3586,6 +3586,292 @@
 			};
 			name = Coverage;
 		};
+		45AE3FB3147D642900CE3131 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AB8F38C08AD0CA100DBB061 /* Omni-Global-Release.xcconfig */;
+			buildSettings = {
+				"GCC_ENABLE_OBJC_GC[sdk=iphoneos*][arch=*]" = unsupported;
+				"GCC_ENABLE_OBJC_GC[sdk=macosx*][arch=*]" = supported;
+				HEADER_SEARCH_PATHS = (
+					"$(value)",
+					/usr/include/libxml2,
+				);
+			};
+			name = AdHoc;
+		};
+		45AE3FB4147D642900CE3131 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A4E080B08AA73400098FF0F /* Omni-Framework-Release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = Info.plist;
+				OMNI_BUNDLE_IDENTIFIER = com.omnigroup.framework.OmniFoundation;
+				OTHER_LDFLAGS = (
+					"$(value)",
+					"$(BZ2_LDFLAGS)",
+				);
+				PRODUCT_NAME = OmniFoundation;
+				SECTORDER_FLAGS = (
+					"-sectorder",
+					__TEXT,
+					__text,
+					"$(PRODUCT_NAME).order",
+				);
+			};
+			name = AdHoc;
+		};
+		45AE3FB5147D642900CE3131 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 344D08D11190D48A00264D89 /* Touch-Library-Release.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = OmniFoundation;
+			};
+			name = AdHoc;
+		};
+		45AE3FB6147D642900CE3131 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 344D08D11190D48A00264D89 /* Touch-Library-Release.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_DIR)/Library/Frameworks",
+					"$(value)",
+				);
+				PRODUCT_NAME = OmniFoundationTouchTests;
+			};
+			name = AdHoc;
+		};
+		45AE3FB7147D642900CE3131 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DYLIB_INSTALLED_NAME_normal = "$(FRAMEWORK_INSTALLED_NAME)";
+				FRAMEWORK_INSTALLED_NAME = "$(OMNI_FRAMEWORK_TARGET_PATH)$(/)$(PRODUCT_NAME).$(WRAPPER_EXTENSION)$(/)Versions$(/)$(FRAMEWORK_VERSION)$(/)$(PRODUCT_NAME)";
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_MODE_FLAG = "a+rX";
+				LIBRARY_SEARCH_PATHS = "";
+				OMNI_FRAMEWORK_TARGET_PATH = "@executable_path/../Frameworks";
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Tests;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = NO;
+			};
+			name = AdHoc;
+		};
+		45AE3FB8147D642900CE3131 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AB8F38908AD0CA100DBB061 /* Omni-Bundle-Release.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR_QUOTED)",
+				);
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "Info-OFUnitTests.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(DEVELOPER_FRAMEWORKS_DIR)";
+				OMNI_BUNDLE_IDENTIFIER = com.omnigroup.framework.OmniFoundation.UnitTests;
+				OTHER_LDFLAGS = "-lxml2";
+				PRODUCT_NAME = OFUnitTests;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = AdHoc;
+		};
+		45AE3FB9147D642900CE3131 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A4E080E08AA73400098FF0F /* Omni-Tool-Release.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = OFSimpleLockTest;
+			};
+			name = AdHoc;
+		};
+		45AE3FBA147D642900CE3131 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A4E080E08AA73400098FF0F /* Omni-Tool-Release.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = OFDedicatedThreadSchedulerTest;
+			};
+			name = AdHoc;
+		};
+		45AE3FBB147D642900CE3131 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A4E080E08AA73400098FF0F /* Omni-Tool-Release.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = OFClobberDetectionTest;
+			};
+			name = AdHoc;
+		};
+		45AE3FBC147D642900CE3131 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A4E080E08AA73400098FF0F /* Omni-Tool-Release.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = OFMainThreadLockTest;
+			};
+			name = AdHoc;
+		};
+		45AE3FBD147D642900CE3131 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A4E080E08AA73400098FF0F /* Omni-Tool-Release.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = OFCrashOnExceptionTest;
+			};
+			name = AdHoc;
+		};
+		45AE3FBE147D642900CE3131 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A4E080E08AA73400098FF0F /* Omni-Tool-Release.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = OFRandomRepeatTest;
+			};
+			name = AdHoc;
+		};
+		45AE3FC0147D642C00CE3131 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AB8F38C08AD0CA100DBB061 /* Omni-Global-Release.xcconfig */;
+			buildSettings = {
+				"GCC_ENABLE_OBJC_GC[sdk=iphoneos*][arch=*]" = unsupported;
+				"GCC_ENABLE_OBJC_GC[sdk=macosx*][arch=*]" = supported;
+				HEADER_SEARCH_PATHS = (
+					"$(value)",
+					/usr/include/libxml2,
+				);
+			};
+			name = AppStore;
+		};
+		45AE3FC1147D642C00CE3131 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A4E080B08AA73400098FF0F /* Omni-Framework-Release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = Info.plist;
+				OMNI_BUNDLE_IDENTIFIER = com.omnigroup.framework.OmniFoundation;
+				OTHER_LDFLAGS = (
+					"$(value)",
+					"$(BZ2_LDFLAGS)",
+				);
+				PRODUCT_NAME = OmniFoundation;
+				SECTORDER_FLAGS = (
+					"-sectorder",
+					__TEXT,
+					__text,
+					"$(PRODUCT_NAME).order",
+				);
+			};
+			name = AppStore;
+		};
+		45AE3FC2147D642C00CE3131 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 344D08D11190D48A00264D89 /* Touch-Library-Release.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = OmniFoundation;
+			};
+			name = AppStore;
+		};
+		45AE3FC3147D642C00CE3131 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 344D08D11190D48A00264D89 /* Touch-Library-Release.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_DIR)/Library/Frameworks",
+					"$(value)",
+				);
+				PRODUCT_NAME = OmniFoundationTouchTests;
+			};
+			name = AppStore;
+		};
+		45AE3FC4147D642C00CE3131 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DYLIB_INSTALLED_NAME_normal = "$(FRAMEWORK_INSTALLED_NAME)";
+				FRAMEWORK_INSTALLED_NAME = "$(OMNI_FRAMEWORK_TARGET_PATH)$(/)$(PRODUCT_NAME).$(WRAPPER_EXTENSION)$(/)Versions$(/)$(FRAMEWORK_VERSION)$(/)$(PRODUCT_NAME)";
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_MODE_FLAG = "a+rX";
+				LIBRARY_SEARCH_PATHS = "";
+				OMNI_FRAMEWORK_TARGET_PATH = "@executable_path/../Frameworks";
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Tests;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = NO;
+			};
+			name = AppStore;
+		};
+		45AE3FC5147D642C00CE3131 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AB8F38908AD0CA100DBB061 /* Omni-Bundle-Release.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR_QUOTED)",
+				);
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "Info-OFUnitTests.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(DEVELOPER_FRAMEWORKS_DIR)";
+				OMNI_BUNDLE_IDENTIFIER = com.omnigroup.framework.OmniFoundation.UnitTests;
+				OTHER_LDFLAGS = "-lxml2";
+				PRODUCT_NAME = OFUnitTests;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = AppStore;
+		};
+		45AE3FC6147D642C00CE3131 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A4E080E08AA73400098FF0F /* Omni-Tool-Release.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = OFSimpleLockTest;
+			};
+			name = AppStore;
+		};
+		45AE3FC7147D642C00CE3131 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A4E080E08AA73400098FF0F /* Omni-Tool-Release.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = OFDedicatedThreadSchedulerTest;
+			};
+			name = AppStore;
+		};
+		45AE3FC8147D642C00CE3131 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A4E080E08AA73400098FF0F /* Omni-Tool-Release.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = OFClobberDetectionTest;
+			};
+			name = AppStore;
+		};
+		45AE3FC9147D642C00CE3131 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A4E080E08AA73400098FF0F /* Omni-Tool-Release.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = OFMainThreadLockTest;
+			};
+			name = AppStore;
+		};
+		45AE3FCA147D642C00CE3131 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A4E080E08AA73400098FF0F /* Omni-Tool-Release.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = OFCrashOnExceptionTest;
+			};
+			name = AppStore;
+		};
+		45AE3FCB147D642C00CE3131 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A4E080E08AA73400098FF0F /* Omni-Tool-Release.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = OFRandomRepeatTest;
+			};
+			name = AppStore;
+		};
 		4A4E074F08AA72B10098FF0F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4A4E080A08AA73400098FF0F /* Omni-Framework-Debug.xcconfig */;
@@ -3925,6 +4211,8 @@
 			buildConfigurations = (
 				340115DF11E515DB0016ADB3 /* Debug */,
 				340115E011E515DB0016ADB3 /* Release */,
+				45AE3FC3147D642C00CE3131 /* AppStore */,
+				45AE3FB6147D642900CE3131 /* AdHoc */,
 				340115E111E515DB0016ADB3 /* Coverage */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -3935,6 +4223,8 @@
 			buildConfigurations = (
 				343B36361034F6900006290A /* Debug */,
 				343B36371034F6900006290A /* Release */,
+				45AE3FCB147D642C00CE3131 /* AppStore */,
+				45AE3FBE147D642900CE3131 /* AdHoc */,
 				343B36381034F6900006290A /* Coverage */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -3945,6 +4235,8 @@
 			buildConfigurations = (
 				344D08BC1190D47300264D89 /* Debug */,
 				344D08BD1190D47300264D89 /* Release */,
+				45AE3FC2147D642C00CE3131 /* AppStore */,
+				45AE3FB5147D642900CE3131 /* AdHoc */,
 				344D08BE1190D47300264D89 /* Coverage */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -3955,6 +4247,8 @@
 			buildConfigurations = (
 				345069130D747ED4004B40C2 /* Debug */,
 				345069140D747ED4004B40C2 /* Release */,
+				45AE3FCA147D642C00CE3131 /* AppStore */,
+				45AE3FBD147D642900CE3131 /* AdHoc */,
 				345069150D747ED4004B40C2 /* Coverage */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -3965,6 +4259,8 @@
 			buildConfigurations = (
 				4A4E074F08AA72B10098FF0F /* Debug */,
 				4A4E075008AA72B10098FF0F /* Release */,
+				45AE3FC1147D642C00CE3131 /* AppStore */,
+				45AE3FB4147D642900CE3131 /* AdHoc */,
 				4A4E075108AA72B10098FF0F /* Coverage */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -3975,6 +4271,8 @@
 			buildConfigurations = (
 				4A4E076208AA72B10098FF0F /* Debug */,
 				4A4E076308AA72B10098FF0F /* Release */,
+				45AE3FC4147D642C00CE3131 /* AppStore */,
+				45AE3FB7147D642900CE3131 /* AdHoc */,
 				4A4E076408AA72B10098FF0F /* Coverage */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -3985,6 +4283,8 @@
 			buildConfigurations = (
 				4A4E077108AA72B10098FF0F /* Debug */,
 				4A4E077208AA72B10098FF0F /* Release */,
+				45AE3FC6147D642C00CE3131 /* AppStore */,
+				45AE3FB9147D642900CE3131 /* AdHoc */,
 				4A4E077308AA72B10098FF0F /* Coverage */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -3995,6 +4295,8 @@
 			buildConfigurations = (
 				4A4E079308AA72B10098FF0F /* Debug */,
 				4A4E079408AA72B10098FF0F /* Release */,
+				45AE3FC7147D642C00CE3131 /* AppStore */,
+				45AE3FBA147D642900CE3131 /* AdHoc */,
 				4A4E079508AA72B10098FF0F /* Coverage */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -4005,6 +4307,8 @@
 			buildConfigurations = (
 				4A4E07A308AA72B10098FF0F /* Debug */,
 				4A4E07A408AA72B10098FF0F /* Release */,
+				45AE3FC8147D642C00CE3131 /* AppStore */,
+				45AE3FBB147D642900CE3131 /* AdHoc */,
 				4A4E07A508AA72B10098FF0F /* Coverage */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -4015,6 +4319,8 @@
 			buildConfigurations = (
 				4A4E07CB08AA72B10098FF0F /* Debug */,
 				4A4E07CC08AA72B10098FF0F /* Release */,
+				45AE3FC5147D642C00CE3131 /* AppStore */,
+				45AE3FB8147D642900CE3131 /* AdHoc */,
 				4A4E07CD08AA72B10098FF0F /* Coverage */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -4025,6 +4331,8 @@
 			buildConfigurations = (
 				4A4E07DC08AA72B10098FF0F /* Debug */,
 				4A4E07DD08AA72B10098FF0F /* Release */,
+				45AE3FC9147D642C00CE3131 /* AppStore */,
+				45AE3FBC147D642900CE3131 /* AdHoc */,
 				4A4E07DE08AA72B10098FF0F /* Coverage */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -4035,6 +4343,8 @@
 			buildConfigurations = (
 				4AD1C16508A9803A00C087FE /* Debug */,
 				4AD1C16608A9803A00C087FE /* Release */,
+				45AE3FC0147D642C00CE3131 /* AppStore */,
+				45AE3FB3147D642900CE3131 /* AdHoc */,
 				4AD1C16708A9803A00C087FE /* Coverage */,
 			);
 			defaultConfigurationIsVisible = 0;
