@@ -426,9 +426,9 @@ static NSMutableDictionary *KeywordActions;
 
 - (void)_resetCurrentColorTableColor;
 {
-    _colorTableRedComponent = -1;
-    _colorTableGreenComponent = -1;
-    _colorTableBlueComponent = -1;
+    _colorTableRedComponent = 0;
+    _colorTableGreenComponent = 0;
+    _colorTableBlueComponent = 0;
 }
 
 - (void)_addColorTableEntry;
