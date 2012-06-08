@@ -326,13 +326,19 @@ static OUIColorSwatch *_newSwatch(OUIColorSwatchPicker *self, OQColor *color, CG
     // Detail navigation setup
     if (_showsSingleSwatch) {
         OUIColorSwatch *swatch = [_colorSwatches lastObject];
-        [swatch addTarget:nil action:@selector(showDetails:) forControlEvents:UIControlEventTouchDown];
+        [swatch addTarget:self action:@selector(showDetails:) forControlEvents:UIControlEventTouchDown];
     } else if (_showsNavigationSwatch) {
         if (!_navigationButton)
             _navigationButton = [[OUIColorSwatch navigateToColorPickerButton] retain];
         _configureSwatchView(self, _navigationButton, &offset, swatchSize);
-        [_navigationButton addTarget:nil action:@selector(showDetails:) forControlEvents:UIControlEventTouchDown];
+        [_navigationButton addTarget:self action:@selector(showDetails:) forControlEvents:UIControlEventTouchDown];
     }
+}
+
+- (void)showDetails:(id)sender;
+{
+    if (![[UIApplication sharedApplication] sendAction:@selector(showDetails:) to:_nonretained_target from:sender forEvent:nil])
+        NSLog(@"Unable to find target for -showDetails: on color swatch tap.");
 }
 
 @end
