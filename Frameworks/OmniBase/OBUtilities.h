@@ -165,7 +165,7 @@ static inline Class OBClassForPointer(id object)
     if (OBPointerIsClass(object))
 	return object;
     else
-	return object->isa;
+	return object_getClass(object);
 }
 
 static inline BOOL OBClassIsSubclassOfClass(Class subClass, Class superClass)

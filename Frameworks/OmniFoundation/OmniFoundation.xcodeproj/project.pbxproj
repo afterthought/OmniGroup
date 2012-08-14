@@ -3486,6 +3486,7 @@
 					"$(DEVELOPER_DIR)/Library/Frameworks",
 					"$(value)",
 				);
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				PRODUCT_NAME = OmniFoundationTouchTests;
 			};
 			name = Debug;
@@ -3498,6 +3499,7 @@
 					"$(DEVELOPER_DIR)/Library/Frameworks",
 					"$(value)",
 				);
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				PRODUCT_NAME = OmniFoundationTouchTests;
 			};
 			name = Release;
@@ -3510,6 +3512,7 @@
 					"$(DEVELOPER_DIR)/Library/Frameworks",
 					"$(value)",
 				);
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				PRODUCT_NAME = OmniFoundationTouchTests;
 			};
 			name = Coverage;
@@ -3542,6 +3545,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 344D08D01190D48A00264D89 /* Touch-Library-Debug.xcconfig */;
 			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				PRODUCT_NAME = OmniFoundation;
 			};
 			name = Debug;
@@ -3550,6 +3554,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 344D08D11190D48A00264D89 /* Touch-Library-Release.xcconfig */;
 			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				PRODUCT_NAME = OmniFoundation;
 			};
 			name = Release;
@@ -3558,6 +3563,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 344D08CF1190D48A00264D89 /* Touch-Library-Coverage.xcconfig */;
 			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				PRODUCT_NAME = OmniFoundation;
 			};
 			name = Coverage;
@@ -3592,10 +3598,12 @@
 			buildSettings = {
 				"GCC_ENABLE_OBJC_GC[sdk=iphoneos*][arch=*]" = unsupported;
 				"GCC_ENABLE_OBJC_GC[sdk=macosx*][arch=*]" = supported;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				HEADER_SEARCH_PATHS = (
 					"$(value)",
 					/usr/include/libxml2,
 				);
+				SDKROOT = macosx10.6;
 			};
 			name = AdHoc;
 		};
@@ -3623,6 +3631,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 344D08D11190D48A00264D89 /* Touch-Library-Release.xcconfig */;
 			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				PRODUCT_NAME = OmniFoundation;
 			};
 			name = AdHoc;
@@ -3635,6 +3644,7 @@
 					"$(DEVELOPER_DIR)/Library/Frameworks",
 					"$(value)",
 				);
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				PRODUCT_NAME = OmniFoundationTouchTests;
 			};
 			name = AdHoc;
@@ -3735,10 +3745,12 @@
 			buildSettings = {
 				"GCC_ENABLE_OBJC_GC[sdk=iphoneos*][arch=*]" = unsupported;
 				"GCC_ENABLE_OBJC_GC[sdk=macosx*][arch=*]" = supported;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				HEADER_SEARCH_PATHS = (
 					"$(value)",
 					/usr/include/libxml2,
 				);
+				SDKROOT = macosx10.6;
 			};
 			name = AppStore;
 		};
@@ -3766,6 +3778,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 344D08D11190D48A00264D89 /* Touch-Library-Release.xcconfig */;
 			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				PRODUCT_NAME = OmniFoundation;
 			};
 			name = AppStore;
@@ -3778,6 +3791,7 @@
 					"$(DEVELOPER_DIR)/Library/Frameworks",
 					"$(value)",
 				);
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				PRODUCT_NAME = OmniFoundationTouchTests;
 			};
 			name = AppStore;
@@ -4170,10 +4184,12 @@
 			buildSettings = {
 				"GCC_ENABLE_OBJC_GC[sdk=iphoneos*][arch=*]" = unsupported;
 				"GCC_ENABLE_OBJC_GC[sdk=macosx*][arch=*]" = supported;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				HEADER_SEARCH_PATHS = (
 					"$(value)",
 					/usr/include/libxml2,
 				);
+				SDKROOT = macosx10.6;
 			};
 			name = Debug;
 		};
@@ -4183,10 +4199,12 @@
 			buildSettings = {
 				"GCC_ENABLE_OBJC_GC[sdk=iphoneos*][arch=*]" = unsupported;
 				"GCC_ENABLE_OBJC_GC[sdk=macosx*][arch=*]" = supported;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				HEADER_SEARCH_PATHS = (
 					"$(value)",
 					/usr/include/libxml2,
 				);
+				SDKROOT = macosx10.6;
 			};
 			name = Release;
 		};
@@ -4196,10 +4214,12 @@
 			buildSettings = {
 				"GCC_ENABLE_OBJC_GC[sdk=iphoneos*][arch=*]" = unsupported;
 				"GCC_ENABLE_OBJC_GC[sdk=macosx*][arch=*]" = supported;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				HEADER_SEARCH_PATHS = (
 					"$(value)",
 					/usr/include/libxml2,
 				);
+				SDKROOT = macosx10.6;
 			};
 			name = Coverage;
 		};

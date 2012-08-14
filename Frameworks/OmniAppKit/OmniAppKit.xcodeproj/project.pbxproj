@@ -3010,6 +3010,7 @@
 					"$(DEVELOPER_DIR)/Library/Frameworks",
 					"$(value)",
 				);
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				PRODUCT_NAME = OmniAppKitTouchTests;
 			};
 			name = Debug;
@@ -3022,6 +3023,7 @@
 					"$(DEVELOPER_DIR)/Library/Frameworks",
 					"$(value)",
 				);
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				PRODUCT_NAME = OmniAppKitTouchTests;
 			};
 			name = Release;
@@ -3034,6 +3036,7 @@
 					"$(DEVELOPER_DIR)/Library/Frameworks",
 					"$(value)",
 				);
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				PRODUCT_NAME = OmniAppKitTouchTests;
 			};
 			name = Coverage;
@@ -3042,6 +3045,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3434792611923B69007D0CE5 /* Touch-Library-Debug.xcconfig */;
 			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				PRODUCT_NAME = OmniAppKit;
 			};
 			name = Debug;
@@ -3050,6 +3054,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3434792711923B69007D0CE5 /* Touch-Library-Release.xcconfig */;
 			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				PRODUCT_NAME = OmniAppKit;
 			};
 			name = Release;
@@ -3058,6 +3063,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3434792511923B69007D0CE5 /* Touch-Library-Coverage.xcconfig */;
 			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				PRODUCT_NAME = OmniAppKit;
 			};
 			name = Coverage;
@@ -3122,6 +3128,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3434792711923B69007D0CE5 /* Touch-Library-Release.xcconfig */;
 			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				PRODUCT_NAME = OmniAppKit;
 			};
 			name = AdHoc;
@@ -3134,6 +3141,7 @@
 					"$(DEVELOPER_DIR)/Library/Frameworks",
 					"$(value)",
 				);
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				PRODUCT_NAME = OmniAppKitTouchTests;
 			};
 			name = AdHoc;
@@ -3198,6 +3206,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3434792711923B69007D0CE5 /* Touch-Library-Release.xcconfig */;
 			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				PRODUCT_NAME = OmniAppKit;
 			};
 			name = AppStore;
@@ -3210,6 +3219,7 @@
 					"$(DEVELOPER_DIR)/Library/Frameworks",
 					"$(value)",
 				);
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				PRODUCT_NAME = OmniAppKitTouchTests;
 			};
 			name = AppStore;

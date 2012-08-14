@@ -2015,6 +2015,8 @@
 					"$(inherited)",
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				PRODUCT_NAME = OmniUI;
 			};
 			name = Debug;
@@ -2027,6 +2029,8 @@
 					"$(inherited)",
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				PRODUCT_NAME = OmniUI;
 			};
 			name = Release;
@@ -2060,6 +2064,8 @@
 					"$(inherited)",
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				PRODUCT_NAME = OmniUI;
 			};
 			name = AdHoc;
@@ -2079,6 +2085,8 @@
 					"$(inherited)",
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				PRODUCT_NAME = OmniUI;
 			};
 			name = AppStore;

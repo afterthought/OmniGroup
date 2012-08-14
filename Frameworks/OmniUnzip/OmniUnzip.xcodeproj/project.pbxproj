@@ -579,6 +579,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 424183BC0F44CF990029B4DA /* Omni-Global-Debug.xcconfig */;
 			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 			};
 			name = Debug;
 		};
@@ -586,6 +587,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 424183BD0F44CF990029B4DA /* Omni-Global-Release.xcconfig */;
 			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 			};
 			name = Release;
 		};
@@ -594,6 +596,7 @@
 			baseConfigurationReference = 34E20FC2119314BE00ECA875 /* Touch-Library-Debug.xcconfig */;
 			buildSettings = {
 				GCC_PREFIX_HEADER = OmniUnzip_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				PRODUCT_NAME = OmniUnzip;
 			};
 			name = Debug;
@@ -603,6 +606,7 @@
 			baseConfigurationReference = 34E20FC1119314BE00ECA875 /* Touch-Library-Coverage.xcconfig */;
 			buildSettings = {
 				GCC_PREFIX_HEADER = OmniUnzip_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				PRODUCT_NAME = OmniUnzip;
 			};
 			name = Coverage;
@@ -612,6 +616,7 @@
 			baseConfigurationReference = 34E20FC3119314BE00ECA875 /* Touch-Library-Release.xcconfig */;
 			buildSettings = {
 				GCC_PREFIX_HEADER = OmniUnzip_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				PRODUCT_NAME = OmniUnzip;
 			};
 			name = Release;
@@ -620,6 +625,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 424183BB0F44CF990029B4DA /* Omni-Global-Coverage.xcconfig */;
 			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 			};
 			name = Coverage;
 		};
@@ -647,6 +653,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 424183BD0F44CF990029B4DA /* Omni-Global-Release.xcconfig */;
 			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 			};
 			name = AdHoc;
 		};
@@ -673,6 +680,7 @@
 			baseConfigurationReference = 34E20FC3119314BE00ECA875 /* Touch-Library-Release.xcconfig */;
 			buildSettings = {
 				GCC_PREFIX_HEADER = OmniUnzip_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				PRODUCT_NAME = OmniUnzip;
 			};
 			name = AdHoc;
@@ -681,6 +689,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 424183BD0F44CF990029B4DA /* Omni-Global-Release.xcconfig */;
 			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 			};
 			name = AppStore;
 		};
@@ -707,6 +716,7 @@
 			baseConfigurationReference = 34E20FC3119314BE00ECA875 /* Touch-Library-Release.xcconfig */;
 			buildSettings = {
 				GCC_PREFIX_HEADER = OmniUnzip_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				PRODUCT_NAME = OmniUnzip;
 			};
 			name = AppStore;
