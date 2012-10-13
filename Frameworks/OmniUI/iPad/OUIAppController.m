@@ -44,6 +44,8 @@ RCS_ID("$Id$");
     UIBarButtonItem *_possiblyTappedButtonItem;
     
     OUIActionSheet *_possiblyVisibleActionSheet;
+    UIView *_possiblyTappedInView;
+    UIButton *_possiblyTappedButton;
 }
 
 BOOL OUIShouldLogPerformanceMetrics;
@@ -277,11 +279,24 @@ static BOOL _dismissVisiblePopoverInFavorOfPopover(OUIAppController *self, UIPop
     if (_possiblyTappedButtonItem && _possiblyVisiblePopoverController.popoverVisible) {
         // Hiding a popover sets its allowed arrow directions to UIPopoverArrowDirectionUnknown under iOS 5, which causes an exception here on representation. So, we now remember the original argument passed in ourselves rather than calling -arrowDirections on the popover.
         [self presentPopover:_possiblyVisiblePopoverController fromBarButtonItem:_possiblyTappedButtonItem permittedArrowDirections:_possiblyVisiblePopoverControllerArrowDirections animated:NO];
+    }
+    else if (_possiblyTappedButton && _possiblyVisiblePopoverController.popoverVisible) {
+    [self presentPopover:_possiblyVisiblePopoverController fromButton:_possiblyTappedButton inView:_possiblyTappedInView permittedArrowDirections:UIPopoverArrowDirectionAny animated:NO];
     } else if (_possiblyVisiblePopoverController.popoverVisible) {
         // popover was shown with -presentPopover:fromRect:inView:permittedArrowDirections:animated: which does not automatically reposition on rotation, so going to dismiss this popover
         [self dismissPopoverAnimated:YES];
     }
 }
+
+-(BOOL)presentPopover:(UIPopoverController *)popover fromButton:(UIButton *)aButton inView:(UIView *)view permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections animated:(BOOL)animated {
+    [_possiblyTappedButton release];
+    _possiblyTappedButton = [aButton retain];
+    [_possiblyTappedInView release];
+    _possiblyTappedInView = [view retain];
+    
+    return [self presentPopover:popover fromRect:aButton.frame inView:view permittedArrowDirections:arrowDirections animated:animated];
+}
+
 
 // Returns NO without displaying the popover, if a previously displayed popover refuses to be dismissed.
 - (BOOL)presentPopover:(UIPopoverController *)popover fromRect:(CGRect)rect inView:(UIView *)view permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections animated:(BOOL)animated;
@@ -299,8 +314,10 @@ static BOOL _dismissVisiblePopoverInFavorOfPopover(OUIAppController *self, UIPop
     if (!_dismissVisiblePopoverInFavorOfPopover(self, popover, animated))
         return NO;
     
-    OBASSERT(_possiblyVisiblePopoverController == nil);
-    _possiblyVisiblePopoverController = [popover retain];
+    if (_possiblyVisiblePopoverController != popover) { // Might be re-displaying a popover after an orientation
+        OBASSERT(_possiblyVisiblePopoverController == nil);
+        _possiblyVisiblePopoverController = [popover retain];
+    }
     _possiblyVisiblePopoverControllerArrowDirections = arrowDirections;
     
     [popover presentPopoverFromRect:rect inView:view permittedArrowDirections:arrowDirections animated:animated];
