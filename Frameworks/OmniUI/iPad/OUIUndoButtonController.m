@@ -90,6 +90,14 @@ RCS_ID("$Id$");
     [[OUIUndoButtonPopoverHelper sharedPopoverHelper] presentPopover:_menuPopoverController fromBarButtonItem:item permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
 }
 
+-(void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
+    [_menuPopoverController release];
+    [_menuNavigationController release];
+    
+    _menuPopoverController = nil;
+    _menuNavigationController = nil;
+}
+
 - (BOOL)dismissUndoMenu;
 {
     if (![_menuPopoverController isPopoverVisible])
