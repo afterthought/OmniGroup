@@ -2095,6 +2095,44 @@
 			};
 			name = Release;
 		};
+		45AE3FD3147D644500CE3131 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 346C4A00119326AD00BE8C49 /* Omni-Global-Release.xcconfig */;
+			buildSettings = {
+			};
+			name = AdHoc;
+		};
+		45AE3FD4147D644500CE3131 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 346C4A12119326AD00BE8C49 /* Touch-Library-Release.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+				);
+				PRODUCT_NAME = OmniUI;
+			};
+			name = AdHoc;
+		};
+		45AE3FD6147D644900CE3131 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 346C4A00119326AD00BE8C49 /* Omni-Global-Release.xcconfig */;
+			buildSettings = {
+			};
+			name = AppStore;
+		};
+		45AE3FD7147D644900CE3131 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 346C4A12119326AD00BE8C49 /* Touch-Library-Release.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+				);
+				PRODUCT_NAME = OmniUI;
+			};
+			name = AppStore;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2103,6 +2141,8 @@
 			buildConfigurations = (
 				1DEB921F08733DC00010E9CD /* Debug */,
 				1DEB922008733DC00010E9CD /* Release */,
+				45AE3FD7147D644900CE3131 /* AppStore */,
+				45AE3FD4147D644500CE3131 /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2112,6 +2152,8 @@
 			buildConfigurations = (
 				1DEB922308733DC00010E9CD /* Debug */,
 				1DEB922408733DC00010E9CD /* Release */,
+				45AE3FD6147D644900CE3131 /* AppStore */,
+				45AE3FD3147D644500CE3131 /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1262,6 +1262,74 @@
 			};
 			name = Coverage;
 		};
+		45AE3FAA147D640500CE3131 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3421AE940F71F89C0096AADB /* Omni-Global-Release.xcconfig */;
+			buildSettings = {
+			};
+			name = AdHoc;
+		};
+		45AE3FAB147D640500CE3131 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3421AE8D0F71F89C0096AADB /* Omni-Framework-Release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = Info.plist;
+				OMNI_BUNDLE_IDENTIFIER = com.omnigroup.framework.OmniFileStore;
+				PRODUCT_NAME = OmniFileStore;
+			};
+			name = AdHoc;
+		};
+		45AE3FAC147D640500CE3131 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34D06C66125D203B00CA3963 /* Touch-Library-Release.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = OmniFileStore;
+			};
+			name = AdHoc;
+		};
+		45AE3FAD147D640500CE3131 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3421AE9C0F71F89C0096AADB /* Omni-Tool-Release.xcconfig */;
+			buildSettings = {
+				GCC_PREFIX_HEADER = OmniFileStore_Prefix.h;
+				PRODUCT_NAME = ofs;
+			};
+			name = AdHoc;
+		};
+		45AE3FAF147D640A00CE3131 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3421AE940F71F89C0096AADB /* Omni-Global-Release.xcconfig */;
+			buildSettings = {
+			};
+			name = AppStore;
+		};
+		45AE3FB0147D640A00CE3131 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3421AE8D0F71F89C0096AADB /* Omni-Framework-Release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = Info.plist;
+				OMNI_BUNDLE_IDENTIFIER = com.omnigroup.framework.OmniFileStore;
+				PRODUCT_NAME = OmniFileStore;
+			};
+			name = AppStore;
+		};
+		45AE3FB1147D640A00CE3131 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34D06C66125D203B00CA3963 /* Touch-Library-Release.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = OmniFileStore;
+			};
+			name = AppStore;
+		};
+		45AE3FB2147D640A00CE3131 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3421AE9C0F71F89C0096AADB /* Omni-Tool-Release.xcconfig */;
+			buildSettings = {
+				GCC_PREFIX_HEADER = OmniFileStore_Prefix.h;
+				PRODUCT_NAME = ofs;
+			};
+			name = AppStore;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1270,6 +1338,8 @@
 			buildConfigurations = (
 				1DEB91AE08733DA50010E9CD /* Debug */,
 				1DEB91AF08733DA50010E9CD /* Release */,
+				45AE3FB0147D640A00CE3131 /* AppStore */,
+				45AE3FAB147D640500CE3131 /* AdHoc */,
 				3421AEBD0F71F8F50096AADB /* Coverage */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1280,6 +1350,8 @@
 			buildConfigurations = (
 				1DEB91B208733DA50010E9CD /* Debug */,
 				1DEB91B308733DA50010E9CD /* Release */,
+				45AE3FAF147D640A00CE3131 /* AppStore */,
+				45AE3FAA147D640500CE3131 /* AdHoc */,
 				3421AEBC0F71F8F50096AADB /* Coverage */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1320,6 +1392,8 @@
 			buildConfigurations = (
 				34C017A610995279001C110D /* Debug */,
 				34C017A710995279001C110D /* Release */,
+				45AE3FB2147D640A00CE3131 /* AppStore */,
+				45AE3FAD147D640500CE3131 /* AdHoc */,
 				34C017A810995279001C110D /* Coverage */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1330,6 +1404,8 @@
 			buildConfigurations = (
 				34D06C55125D202500CA3963 /* Debug */,
 				34D06C56125D202500CA3963 /* Release */,
+				45AE3FB1147D640A00CE3131 /* AppStore */,
+				45AE3FAC147D640500CE3131 /* AdHoc */,
 				34D06C57125D202500CA3963 /* Coverage */,
 			);
 			defaultConfigurationIsVisible = 0;
