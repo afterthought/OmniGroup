@@ -250,6 +250,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 34C4D6B208C7AB280072D2D6 /* Omni-Tool-Debug.xcconfig */;
 			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = FixStringsFile;
 			};
 			name = Debug;
@@ -258,6 +259,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 34C4D6B308C7AB280072D2D6 /* Omni-Tool-Release.xcconfig */;
 			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = FixStringsFile;
 			};
 			name = Release;
@@ -266,6 +268,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 34C4D6B108C7AB280072D2D6 /* Omni-Tool-Coverage.xcconfig */;
 			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = FixStringsFile;
 			};
 			name = Coverage;
@@ -302,6 +305,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 34C4D6B308C7AB280072D2D6 /* Omni-Tool-Release.xcconfig */;
 			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = FixStringsFile;
 			};
 			name = AdHoc;
@@ -317,6 +321,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 34C4D6B308C7AB280072D2D6 /* Omni-Tool-Release.xcconfig */;
 			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = FixStringsFile;
 			};
 			name = AppStore;
