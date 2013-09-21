@@ -257,6 +257,10 @@ static const struct {
 - (void)_writeColorAttributes:(NSDictionary *)newAttributes;
 {
     id newColor = [newAttributes objectForKey:(NSString *)kCTForegroundColorAttributeName];
+    if ([newColor isKindOfClass:[UIColor class]]) {
+        newColor = (id)[((UIColor *)newColor) CGColor];
+    }
+
     OUIRTFColorTableEntry *colorTableEntry = [[OUIRTFColorTableEntry alloc] initWithColor:newColor];
     NSNumber *newColorIndexValue = [_registeredColors objectForKey:colorTableEntry];
     [colorTableEntry release];
@@ -369,6 +373,9 @@ static const struct {
     for (id color in textColors) {
         if (!color || [color isNull])
             continue;
+        if ([color isKindOfClass:[UIColor class]]) {
+            color = (id)[((UIColor *)color) CGColor];
+        }
 #ifdef DEBUG_RTF_WRITER
         NSLog(@"Registering color: %@", [OUIRTFWriter debugStringForColor:color]);
 #endif
