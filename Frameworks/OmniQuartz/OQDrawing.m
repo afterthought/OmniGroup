@@ -368,11 +368,11 @@ CGImageRef OQCreateImageWithSize(CGImageRef image, CGSize size, CGInterpolationQ
     // Try building a bitmap context with the same settings as the input image.
     CGColorSpaceRef colorSpace = CGImageGetColorSpace(image);
     size_t bytesPerPixel = CGImageGetBitsPerPixel(image) / 8; OBASSERT((CGImageGetBitsPerPixel(image) % 8) == 0);
-    CGContextRef ctx = CGBitmapContextCreate(NULL, size.width, size.height, CGImageGetBitsPerComponent(image), bytesPerPixel*size.width, colorSpace, CGImageGetAlphaInfo(image));
+    CGContextRef ctx = CGBitmapContextCreate(NULL, size.width, size.height, CGImageGetBitsPerComponent(image), bytesPerPixel*size.width, colorSpace, (CGBitmapInfo)CGImageGetAlphaInfo(image));
     if (!ctx) {
         // Fall back to something that CGBitmapContext actually understands
         CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-        ctx = CGBitmapContextCreate(NULL, size.width, size.height, 8/*bitsPerComponent*/, 4*size.width, colorSpace, kCGImageAlphaPremultipliedFirst);
+        ctx = CGBitmapContextCreate(NULL, size.width, size.height, 8/*bitsPerComponent*/, 4*size.width, colorSpace, (CGBitmapInfo)kCGImageAlphaPremultipliedFirst);
         CGColorSpaceRelease(colorSpace);
     }
 

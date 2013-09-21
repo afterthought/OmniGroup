@@ -405,7 +405,7 @@ NSDictionary *OFNetStateTXTRecordDictionaryFromData(NSData *txtRecord, BOOL expe
             if (expectTypePrefixes) {
                 NSUInteger length = [string length];
                 if (length < 2)
-                    return [NSString stringWithFormat:@"TXT record entry for \"%@\" is too short.", key];
+                    *outErrorString = [NSString stringWithFormat:@"TXT record entry for \"%@\" is too short.", key];
                 NSString *payload = [string substringFromIndex:2];
                 
                 unichar type = [string characterAtIndex:0];
@@ -425,7 +425,7 @@ NSDictionary *OFNetStateTXTRecordDictionaryFromData(NSData *txtRecord, BOOL expe
                     }
                     default:
                         OBASSERT_NOT_REACHED("Implement this type");
-                        return [NSString stringWithFormat:@"Unable to handle TXT record entry with type '%c' for key \"%@\".", type, key];
+                        *outErrorString = [NSString stringWithFormat:@"Unable to handle TXT record entry with type '%c' for key \"%@\".", type, key];
                 }
             } else {
                 value = string;
