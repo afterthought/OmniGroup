@@ -1463,7 +1463,14 @@ static BOOL _rangeIsInsertionPoint(OUIEditableFrame *self, UITextRange *r)
         return [[self typingAttributes] objectForKey:attr];
     
     NSUInteger pos = ((OUEFTextPosition *)(r.start)).index;
-    return [_content attribute:attr atIndex:pos effectiveRange:NULL];
+    id val = [_content attribute:attr atIndex:pos effectiveRange:NULL];
+    
+    if ([val isKindOfClass:[UIColor class]]) {
+        val = (id)[((UIColor *)val) CGColor];
+    }
+
+    
+    return val;
 }
 
 - (void)setValue:(id)value forAttribute:(NSString *)attr inRange:(UITextRange *)r;
