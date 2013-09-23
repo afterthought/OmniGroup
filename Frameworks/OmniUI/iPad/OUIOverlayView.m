@@ -271,7 +271,7 @@ RCS_ID("$Id$");
     
     // setting defaults on nsattributedstring
     NSMutableAttributedString *mutableText = [aString mutableCopy];
-    [mutableText addAttribute:(id)kCTForegroundColorAttributeName value:(id)[[UIColor whiteColor] CGColor] range:NSMakeRange(0, [mutableText length])];
+    [mutableText addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(0, [mutableText length])];
     
     CTFontRef defaultFont = CTFontCreateWithName(CFSTR("Helvetica"), 16, NULL);
     [mutableText addAttribute:(id)kCTFontAttributeName value:(id)defaultFont range:NSMakeRange(0, [mutableText length])];

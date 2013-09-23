@@ -279,7 +279,7 @@ static void _SetAttributedStringAttribute(NSMutableAttributedString *attributedS
     OBASSERT(cls);
 
     NSMutableAttributedString *displayString = [[self.attributedString mutableCopy] autorelease];
-    _SetAttributedStringAttribute(displayString, (id)kCTForegroundColorAttributeName, (id)[textColor CGColor]);
+    _SetAttributedStringAttribute(displayString, NSForegroundColorAttributeName, textColor);
     _SetAttributedStringAttribute(displayString, (id)kCTFontAttributeName, (id)font);
 
     line = CTLineCreateWithAttributedString((CFAttributedStringRef)displayString);
@@ -290,7 +290,7 @@ static void _SetAttributedStringAttribute(NSMutableAttributedString *attributedS
         CTLineRef truncatedLine = NULL;
 
         NSMutableAttributedString *truncationString = [[[cls alloc] initWithString:@"…" attributes:nil] autorelease];
-        _SetAttributedStringAttribute(truncationString, (id)kCTForegroundColorAttributeName,  (id)[textColor CGColor]);
+        _SetAttributedStringAttribute(truncationString, NSForegroundColorAttributeName,  textColor);
         _SetAttributedStringAttribute(truncationString, (id)kCTFontAttributeName, (id)font);
 
         truncationToken = CTLineCreateWithAttributedString((CFAttributedStringRef)truncationString);

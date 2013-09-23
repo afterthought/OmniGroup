@@ -294,7 +294,7 @@ static NSString *_getText(OUIInspectorTextWell *self, NSString *text, TextType *
     }
     
     UIColor *textColor = textType == TextTypePlaceholder ? [OUIInspector disabledLabelTextColor] : [self textColor];
-    _setAttr(attributedText, (id)kCTForegroundColorAttributeName, (id)[textColor CGColor]);
+    _setAttr(attributedText, NSForegroundColorAttributeName, textColor);
     
     OBASSERT(_editor); // use the paragraph style already set up when the editor was created
     CTParagraphStyleRef pgStyle = _editor.defaultCTParagraphStyle;
@@ -779,7 +779,7 @@ static const CGFloat kEditorInsetY = 2; // The top/bottom also need a little ext
     }
     
     UIColor *textColor = textType == TextTypePlaceholder ? [OUIInspector disabledLabelTextColor] : [self textColor];
-    _setAttr(attrText, (id)kCTForegroundColorAttributeName, (id)[textColor CGColor]);
+    _setAttr(attrText, NSForegroundColorAttributeName, textColor);
     
     // Align the text horizontally and truncate instead of wrapping.
     {
@@ -817,7 +817,7 @@ static const CGFloat kEditorInsetY = 2; // The top/bottom also need a little ext
         }
         
         UIColor *labelColor = self.enabled ? [self labelColor] : [OUIInspector disabledLabelTextColor];
-        _setAttr(attrLabel, (id)kCTForegroundColorAttributeName, (id)[labelColor CGColor]);
+        _setAttr(attrLabel, NSForegroundColorAttributeName, labelColor);
         
         _labelTextLayout = [[OUITextLayout alloc] initWithAttributedString:attrLabel constraints:CGSizeMake(OUITextLayoutUnlimitedSize, OUITextLayoutUnlimitedSize)];
         [attrLabel autorelease];
@@ -853,7 +853,7 @@ static const CGFloat kEditorInsetY = 2; // The top/bottom also need a little ext
         }
         
         UIColor *textColor = textType == TextTypePlaceholder ? [OUIInspector disabledLabelTextColor] : [self textColor];
-        _setAttr(attrString, (id)kCTForegroundColorAttributeName, (id)[textColor CGColor]);
+        _setAttr(attrString, NSForegroundColorAttributeName, textColor);
         
         // Right align and tail truncate the text
         {

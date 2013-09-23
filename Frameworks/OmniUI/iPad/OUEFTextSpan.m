@@ -67,16 +67,16 @@ RCS_ID("$Id$");
 
 - (OQColor *)colorForInspectorSlice:(OUIInspectorSlice *)inspector;
 {
-    CGColorRef color = (CGColorRef)[frame attribute:(id)kCTForegroundColorAttributeName inRange:self];
+    UIColor *color = (UIColor *)[frame attribute:NSForegroundColorAttributeName inRange:self];
     if (color == NULL) {
         return nil;
     }
-    return [OQColor colorWithCGColor:color];
+    return [OQColor colorWithPlatformColor:color];
 }
 
 - (void)setColor:(OQColor *)color fromInspectorSlice:(OUIInspectorSlice *)inspector;
 {
-    [frame setValue:(id)[[color toColor] CGColor] forAttribute:(id)kCTForegroundColorAttributeName inRange:self];
+    [frame setValue:[color toColor] forAttribute:NSForegroundColorAttributeName inRange:self];
 }
 
 - (NSString *)preferenceKeyForInspectorSlice:(OUIInspectorSlice *)inspector;

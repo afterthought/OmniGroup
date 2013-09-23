@@ -256,10 +256,7 @@ static const struct {
 
 - (void)_writeColorAttributes:(NSDictionary *)newAttributes;
 {
-    id newColor = [newAttributes objectForKey:(NSString *)kCTForegroundColorAttributeName];
-    if ([newColor isKindOfClass:[UIColor class]]) {
-        newColor = (id)[((UIColor *)newColor) CGColor];
-    }
+    id newColor = [newAttributes objectForKey:NSForegroundColorAttributeName];
 
     OUIRTFColorTableEntry *colorTableEntry = [[OUIRTFColorTableEntry alloc] initWithColor:newColor];
     NSNumber *newColorIndexValue = [_registeredColors objectForKey:colorTableEntry];
@@ -368,14 +365,12 @@ static const struct {
     [defaultColorEntry release];
 
     NSUInteger stringLength = [_attributedString length];
-    NSSet *textColors = [_attributedString valuesOfAttribute:(NSString *)kCTForegroundColorAttributeName inRange:(NSRange){0, stringLength}];
+    NSSet *textColors = [_attributedString valuesOfAttribute:NSForegroundColorAttributeName inRange:(NSRange){0, stringLength}];
     textColors = [textColors setByAddingObjectsFromSet:[_attributedString valuesOfAttribute:OABackgroundColorAttributeName inRange:(NSRange){0, stringLength}]];
     for (id color in textColors) {
         if (!color || [color isNull])
             continue;
-        if ([color isKindOfClass:[UIColor class]]) {
-            color = (id)[((UIColor *)color) CGColor];
-        }
+
 #ifdef DEBUG_RTF_WRITER
         NSLog(@"Registering color: %@", [OUIRTFWriter debugStringForColor:color]);
 #endif

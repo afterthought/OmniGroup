@@ -1088,7 +1088,7 @@ static NSMutableDictionary *KeywordActions;
         OMNI_POOL_START {
             _cachedStringAttributes = [[NSMutableDictionary alloc] init];
             if (_foregroundColor != NULL)
-                [_cachedStringAttributes setObject:_foregroundColor forKey:(NSString *)kCTForegroundColorAttributeName];
+                [_cachedStringAttributes setObject:_foregroundColor forKey:NSForegroundColorAttributeName];
             if (_backgroundColor != NULL)
                 [_cachedStringAttributes setObject:_backgroundColor forKey:OABackgroundColorAttributeName];
 #ifdef DEBUG_RTF_READER

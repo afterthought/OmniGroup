@@ -2275,7 +2275,7 @@ static BOOL _eventTouchesView(UIEvent *event, UIView *view)
     if (defaultFont != nil)
         [allDefaultAttributes setObject:(id)defaultFont forKey:(id)kCTFontAttributeName];
     if (textColor != nil)
-        [allDefaultAttributes setObject:(id)[textColor CGColor] forKey:(id)kCTForegroundColorAttributeName];
+        [allDefaultAttributes setObject:textColor forKey:NSForegroundColorAttributeName];
     return allDefaultAttributes;
 }
 
@@ -3441,10 +3441,10 @@ CGRect OUITextLayoutFirstRectForRange(CTFrameRef frame, NSRange characterRange)
         CFRelease(fontName);
         [uiStyles setObject:uif forKey:UITextInputTextFontKey];
     }
-    
-    CGColorRef cgColor = (CGColorRef)[ctStyles objectForKey:(id)kCTForegroundColorAttributeName];
-    if (cgColor)
-        [uiStyles setObject:[UIColor colorWithCGColor:cgColor] forKey:UITextInputTextColorKey];
+
+    UIColor * foreColor = (UIColor *)[ctStyles objectForKey:NSForegroundColorAttributeName];
+    if (foreColor)
+        [uiStyles setObject:foreColor forKey:UITextInputTextColorKey];
     
     if (self.backgroundColor)
         [uiStyles setObject:self.backgroundColor forKey:UITextInputTextBackgroundColorKey];
@@ -4934,7 +4934,7 @@ void OUITextLayoutDrawExtraRunBackgrounds(CGContextRef ctx, CTFrameRef drawnFram
 {
     NSMutableArray *slices = [NSMutableArray array];
     [slices addObject:[[[OUITextColorAttributeInspectorSlice alloc] initWithLabel:NSLocalizedStringFromTableInBundle(@"Text color", @"OUIInspectors", OMNI_BUNDLE, @"Title above color swatch picker for the text color.")
-                                                                    attributeName:OAForegroundColorAttributeName] autorelease]];
+                                                                    attributeName:NSForegroundColorAttributeName] autorelease]];
     [slices addObject:[[[OUITextColorAttributeInspectorSlice alloc] initWithLabel:NSLocalizedStringFromTableInBundle(@"Background color", @"OUIInspectors", OMNI_BUNDLE, @"Title above color swatch picker for the text color.")
                                                                     attributeName:OABackgroundColorAttributeName] autorelease]];
     [slices addObject:[[[OUIFontAttributesInspectorSlice alloc] init] autorelease]];
