@@ -1003,6 +1003,54 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1313338617F1EE85006E9BBC /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				PRODUCT_NAME = OFSSync;
+			};
+			name = AppStore;
+		};
+		1313338717F1EE85006E9BBC /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				PRODUCT_NAME = OFSSync;
+			};
+			name = AdHoc;
+		};
+		1313338817F1EE85006E9BBC /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				PRODUCT_NAME = OFSUnitTests;
+			};
+			name = AppStore;
+		};
+		1313338917F1EE85006E9BBC /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				PRODUCT_NAME = OFSUnitTests;
+			};
+			name = AdHoc;
+		};
+		1313338A17F1EE85006E9BBC /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				PRODUCT_NAME = OFSUnitTestsTouch;
+			};
+			name = AppStore;
+		};
+		1313338B17F1EE85006E9BBC /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				PRODUCT_NAME = OFSUnitTestsTouch;
+			};
+			name = AdHoc;
+		};
 		1DEB91AE08733DA50010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3421AE8C0F71F89C0096AADB /* Omni-Framework-Debug.xcconfig */;
@@ -1273,6 +1321,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3421AE8D0F71F89C0096AADB /* Omni-Framework-Release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				INFOPLIST_FILE = Info.plist;
 				OMNI_BUNDLE_IDENTIFIER = com.omnigroup.framework.OmniFileStore;
 				PRODUCT_NAME = OmniFileStore;
@@ -1283,6 +1332,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 34D06C66125D203B00CA3963 /* Touch-Library-Release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				PRODUCT_NAME = OmniFileStore;
 			};
 			name = AdHoc;
@@ -1307,6 +1357,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3421AE8D0F71F89C0096AADB /* Omni-Framework-Release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				INFOPLIST_FILE = Info.plist;
 				OMNI_BUNDLE_IDENTIFIER = com.omnigroup.framework.OmniFileStore;
 				PRODUCT_NAME = OmniFileStore;
@@ -1317,6 +1368,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 34D06C66125D203B00CA3963 /* Touch-Library-Release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				PRODUCT_NAME = OmniFileStore;
 			};
 			name = AppStore;
@@ -1363,6 +1415,8 @@
 				340490B615E53DDC0044F67F /* Debug */,
 				340490B715E53DDC0044F67F /* Release */,
 				340490B815E53DDC0044F67F /* Coverage */,
+				1313338A17F1EE85006E9BBC /* AppStore */,
+				1313338B17F1EE85006E9BBC /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1373,6 +1427,8 @@
 				349F979D15DEA87B00D7677C /* Debug */,
 				349F979E15DEA87B00D7677C /* Release */,
 				349F979F15DEA87B00D7677C /* Coverage */,
+				1313338817F1EE85006E9BBC /* AppStore */,
+				1313338917F1EE85006E9BBC /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1383,6 +1439,8 @@
 				34AEB78115BF648800B66785 /* Debug */,
 				34AEB78215BF648800B66785 /* Release */,
 				34AEB78315BF648800B66785 /* Coverage */,
+				1313338617F1EE85006E9BBC /* AppStore */,
+				1313338717F1EE85006E9BBC /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
