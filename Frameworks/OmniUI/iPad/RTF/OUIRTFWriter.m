@@ -258,7 +258,7 @@ static const struct {
 {
     id newColor = [newAttributes objectForKey:NSForegroundColorAttributeName];
 
-    OUIRTFColorTableEntry *colorTableEntry = [[OUIRTFColorTableEntry alloc] initWithColor:newColor];
+    OUIRTFColorTableEntry *colorTableEntry = [[OUIRTFColorTableEntry alloc] initWithColor:(id)[newColor CGColor]];
     NSNumber *newColorIndexValue = [_registeredColors objectForKey:colorTableEntry];
     [colorTableEntry release];
     OBASSERT(newColorIndexValue != nil);
@@ -271,8 +271,8 @@ static const struct {
         _state.foregroundColorIndex = newColorIndex;
     }
     
-    newColor = [newAttributes objectForKey:OABackgroundColorAttributeName];
-    colorTableEntry = [[OUIRTFColorTableEntry alloc] initWithColor:newColor];
+    newColor = [newAttributes objectForKey:NSBackgroundColorAttributeName];
+    colorTableEntry = [[OUIRTFColorTableEntry alloc] initWithColor:(id)[newColor CGColor]];
     newColorIndexValue = [_registeredColors objectForKey:colorTableEntry];
     [colorTableEntry release];
     OBASSERT(newColorIndexValue != nil);
@@ -366,7 +366,7 @@ static const struct {
 
     NSUInteger stringLength = [_attributedString length];
     NSSet *textColors = [_attributedString valuesOfAttribute:NSForegroundColorAttributeName inRange:(NSRange){0, stringLength}];
-    textColors = [textColors setByAddingObjectsFromSet:[_attributedString valuesOfAttribute:OABackgroundColorAttributeName inRange:(NSRange){0, stringLength}]];
+    textColors = [textColors setByAddingObjectsFromSet:[_attributedString valuesOfAttribute:NSBackgroundColorAttributeName inRange:(NSRange){0, stringLength}]];
     for (id color in textColors) {
         if (!color || [color isNull])
             continue;
@@ -374,7 +374,7 @@ static const struct {
 #ifdef DEBUG_RTF_WRITER
         NSLog(@"Registering color: %@", [OUIRTFWriter debugStringForColor:color]);
 #endif
-        OUIRTFColorTableEntry *colorTableEntry = [[OUIRTFColorTableEntry alloc] initWithColor:color];
+        OUIRTFColorTableEntry *colorTableEntry = [[OUIRTFColorTableEntry alloc] initWithColor:(id)[color CGColor]];
         if ([_registeredColors objectForKey:colorTableEntry] == nil) {
             [colorTableEntry writeToDataBuffer:_dataBuffer];
             [_registeredColors setObject:[NSNumber numberWithInt:colorIndex++] forKey:colorTableEntry];

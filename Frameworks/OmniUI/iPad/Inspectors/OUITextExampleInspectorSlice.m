@@ -82,13 +82,13 @@ NSString * const OUITextExampleInspectorSliceExmapleString = @"Hwæt! We Gardena
         return;
     }
     
-    CGColorRef backgroundColorValue = (CGColorRef)[attributedString attribute:OABackgroundColorAttributeName atIndex:0 effectiveRange:NULL];
+    CGColorRef backgroundColorValue = (CGColorRef)[attributedString attribute:NSBackgroundColorAttributeName atIndex:0 effectiveRange:NULL];
     OQColor *backgroundColor;
     if (backgroundColorValue) {
         backgroundColor = [OQColor colorWithCGColor:backgroundColorValue];
 
         NSMutableAttributedString *noBackgroundAttributedString = [[attributedString mutableCopy] autorelease];
-        [noBackgroundAttributedString removeAttribute:OABackgroundColorAttributeName range:NSMakeRange(0, stringLength)];
+        [noBackgroundAttributedString removeAttribute:NSBackgroundColorAttributeName range:NSMakeRange(0, stringLength)];
         
         attributedString = noBackgroundAttributedString;
     } else {

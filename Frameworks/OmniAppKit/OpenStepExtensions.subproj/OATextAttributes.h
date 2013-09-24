@@ -17,13 +17,12 @@
 
 // Text attributes that have no matching attribute in CoreText
 #if defined(TARGET_OS_IPHONE) && TARGET_OS_IPHONE
-extern NSString * const OABackgroundColorAttributeName;
 extern NSString * const OALinkAttributeName;
 extern NSString * const OAStrikethroughStyleAttributeName;
 extern NSString * const OAStrikethroughColorAttributeName;
 extern NSUInteger const OAUnderlineByWordMask;
 #else
-#define OABackgroundColorAttributeName NSBackgroundColorAttributeName
+
 #define OALinkAttributeName NSLinkAttributeName
 #define OAStrikethroughStyleAttributeName NSStrikethroughStyleAttributeName
 #define OAStrikethroughColorAttributeName NSStrikethroughColorAttributeName
@@ -37,7 +36,7 @@ extern NSUInteger const OAUnderlineByWordMask;
 #define OA_TEXT_KEY(mac,ipad) (mac)
 #endif
 
-#define OAForegroundColorAttributeName OA_TEXT_KEY(NSForegroundColorAttributeName, kCTForegroundColorAttributeName)
+#define OAForegroundColorAttributeName OA_TEXT_KEY(NSForegroundColorAttributeName, NSForegroundColorAttributeName)
 #define OAStrokeWidthAttributeName OA_TEXT_KEY(NSStrokeWidthAttributeName, kCTStrokeWidthAttributeName)
 #define OAStrokeColorAttributeName OA_TEXT_KEY(NSStrokeColorAttributeName, kCTStrokeColorAttributeName)
 #define OAFontAttributeName OA_TEXT_KEY(NSFontAttributeName, kCTFontAttributeName)

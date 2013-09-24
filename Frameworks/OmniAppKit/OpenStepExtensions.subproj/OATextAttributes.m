@@ -14,7 +14,6 @@ RCS_ID("$Id$");
 #define UNDERLINE_BY_WORD_MASK (0x8000) // Not documented anywhere. We'll assert this stays true on Mac OS X
 
 #if defined(TARGET_OS_IPHONE) && TARGET_OS_IPHONE
-NSString * const OABackgroundColorAttributeName = @"OABackgroundColorAttributeName";
 NSString * const OALinkAttributeName = @"OALinkAttributeName";
 NSString * const OAStrikethroughStyleAttributeName = @"OAStrikethroughStyleAttributeName";
 NSString * const OAStrikethroughColorAttributeName = @"OAStrikethroughColorAttributeName";

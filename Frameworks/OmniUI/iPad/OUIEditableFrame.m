@@ -4465,7 +4465,7 @@ BOOL OUITextLayoutDrawRunBackgrounds(CGContextRef ctx, CTFrameRef drawnFrame, NS
     NSUInteger textLength = [immutableContent length];
     while (cursor < textLength) {
         NSRange span = { 0, 0 };
-        CGColorRef bgColor = (CGColorRef)[immutableContent attribute:OABackgroundColorAttributeName
+        UIColor * bgColor = (UIColor *)[immutableContent attribute:NSBackgroundColorAttributeName
                                                              atIndex:cursor
                                                longestEffectiveRange:&span
                                                              inRange:(NSRange){cursor, textLength-cursor}];
@@ -4473,10 +4473,10 @@ BOOL OUITextLayoutDrawRunBackgrounds(CGContextRef ctx, CTFrameRef drawnFrame, NS
             break;
         
         // Allow the caller to selectively filter our spans. This is used by OO/iPad to avoid double-compositing translucent background colors.
-        if (bgColor && CGColorGetAlpha(bgColor) > 0 && (!filter || filter(span, bgColor))) {
+        if (bgColor && CGColorGetAlpha([bgColor CGColor]) > 0 && (!filter || filter(span, [bgColor CGColor]))) {
             sawAnything = YES;
             
-            OUITextLayoutFillBackgroundForRange(ctx, drawnFrame, span, bgColor, layoutOrigin, leftEdge, rightEdge);
+            OUITextLayoutFillBackgroundForRange(ctx, drawnFrame, span, [bgColor CGColor], layoutOrigin, leftEdge, rightEdge);
         }
         
         cursor = span.location + span.length;
@@ -4936,7 +4936,7 @@ void OUITextLayoutDrawExtraRunBackgrounds(CGContextRef ctx, CTFrameRef drawnFram
     [slices addObject:[[[OUITextColorAttributeInspectorSlice alloc] initWithLabel:NSLocalizedStringFromTableInBundle(@"Text color", @"OUIInspectors", OMNI_BUNDLE, @"Title above color swatch picker for the text color.")
                                                                     attributeName:NSForegroundColorAttributeName] autorelease]];
     [slices addObject:[[[OUITextColorAttributeInspectorSlice alloc] initWithLabel:NSLocalizedStringFromTableInBundle(@"Background color", @"OUIInspectors", OMNI_BUNDLE, @"Title above color swatch picker for the text color.")
-                                                                    attributeName:OABackgroundColorAttributeName] autorelease]];
+                                                                    attributeName:NSBackgroundColorAttributeName] autorelease]];
     [slices addObject:[[[OUIFontAttributesInspectorSlice alloc] init] autorelease]];
     [slices addObject:[[[OUIFontInspectorSlice alloc] init] autorelease]];
     [slices addObject:[[[OUIParagraphStyleInspectorSlice alloc] init] autorelease]];

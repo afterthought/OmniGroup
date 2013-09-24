@@ -56,7 +56,7 @@ RCS_ID("$Id$")
     OBPRECONDITION([object isKindOfClass:[OUEFTextSpan class]]);
     OUEFTextSpan *span = object;
 
-    [span.frame setValue:(id)[[color toColor] CGColor] forAttribute:(id)_attributeName inRange:span];
+    [span.frame setValue:(id)[color toColor] forAttribute:(id)_attributeName inRange:span];
 }
 
 #pragma mark -
