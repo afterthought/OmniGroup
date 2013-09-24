@@ -43,12 +43,12 @@ RCS_ID("$Id$")
     OBPRECONDITION([object isKindOfClass:[OUEFTextSpan class]]);
     OUEFTextSpan *span = object;
     
-    CGColorRef backgroundColor = (CGColorRef)[span.frame attribute:_attributeName inRange:span];
+    UIColor * backgroundColor = (UIColor *)[span.frame attribute:_attributeName inRange:span];
     
     if (!backgroundColor)
         return nil;
     
-    return [OQColor colorWithCGColor:backgroundColor];
+    return [OQColor colorWithPlatformColor:backgroundColor];
 }
 
 - (void)setColor:(OQColor *)color forObject:(id)object;
