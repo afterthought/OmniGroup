@@ -530,6 +530,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 34AFAD09164B0E8C009E39AB /* Omni-Framework-Debug.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "OmniFileExchange-Info.plist";
 				OMNI_BUNDLE_IDENTIFIER = com.omnigroup.framework.OmniFileExchange;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -540,6 +541,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 34AFAD0A164B0E8C009E39AB /* Omni-Framework-Release.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "OmniFileExchange-Info.plist";
 				OMNI_BUNDLE_IDENTIFIER = com.omnigroup.framework.OmniFileExchange;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -550,6 +552,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 34AFAD23164B0E8C009E39AB /* Touch-Library-Debug.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OmniFileExchange;
 			};
 			name = Debug;
@@ -558,6 +561,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 34AFAD24164B0E8C009E39AB /* Touch-Library-Release.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OmniFileExchange;
 			};
 			name = Release;

@@ -716,6 +716,7 @@
 					"$(DEVELOPER_DIR)/Library/Frameworks",
 					"$(value)",
 				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OmniBaseTouchTests;
 			};
 			name = Debug;
@@ -728,6 +729,7 @@
 					"$(DEVELOPER_DIR)/Library/Frameworks",
 					"$(value)",
 				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OmniBaseTouchTests;
 			};
 			name = Release;
@@ -740,6 +742,7 @@
 					"$(DEVELOPER_DIR)/Library/Frameworks",
 					"$(value)",
 				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OmniBaseTouchTests;
 			};
 			name = Coverage;
@@ -748,6 +751,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 34354D211190BFC700FE1BEB /* Touch-Library-Debug.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OmniBase;
 			};
 			name = Debug;
@@ -756,6 +760,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 34354D221190BFC700FE1BEB /* Touch-Library-Release.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OmniBase;
 			};
 			name = Release;
@@ -764,6 +769,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 34354D201190BFC700FE1BEB /* Touch-Library-Coverage.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OmniBase;
 			};
 			name = Coverage;
@@ -772,6 +778,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4AB8F0EF08AD0B7000DBB061 /* Omni-Tool-Debug.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OBLoadBundle;
 			};
 			name = Debug;
@@ -780,6 +787,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4AB8F0F008AD0B7000DBB061 /* Omni-Tool-Release.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OBLoadBundle;
 			};
 			name = Release;
@@ -788,6 +796,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4AB8F0EE08AD0B7000DBB061 /* Omni-Tool-Coverage.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OBLoadBundle;
 			};
 			name = Coverage;
@@ -801,6 +810,7 @@
 					"$(value)",
 				);
 				GCC_PREFIX_HEADER = "Tests/OBUnitTests/OBUnitTests-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "Tests/OBUnitTests/OBUnitTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
@@ -816,6 +826,7 @@
 					"$(value)",
 				);
 				GCC_PREFIX_HEADER = "Tests/OBUnitTests/OBUnitTests-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "Tests/OBUnitTests/OBUnitTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
@@ -831,6 +842,7 @@
 					"$(value)",
 				);
 				GCC_PREFIX_HEADER = "Tests/OBUnitTests/OBUnitTests-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "Tests/OBUnitTests/OBUnitTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
@@ -848,6 +860,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4AAFAE1A08A0216200E04045 /* Omni-Framework-Release.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = Info.plist;
 				OMNI_BUNDLE_IDENTIFIER = com.omnigroup.framework.OmniBase;
 				PRODUCT_NAME = OmniBase;
@@ -864,6 +877,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4AB8F0F008AD0B7000DBB061 /* Omni-Tool-Release.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OBLoadBundle;
 			};
 			name = AdHoc;
@@ -872,6 +886,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 34354D221190BFC700FE1BEB /* Touch-Library-Release.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OmniBase;
 			};
 			name = AdHoc;
@@ -884,6 +899,7 @@
 					"$(DEVELOPER_DIR)/Library/Frameworks",
 					"$(value)",
 				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OmniBaseTouchTests;
 			};
 			name = AdHoc;
@@ -897,6 +913,7 @@
 					"$(value)",
 				);
 				GCC_PREFIX_HEADER = "Tests/OBUnitTests/OBUnitTests-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "Tests/OBUnitTests/OBUnitTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
@@ -914,6 +931,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4AAFAE1A08A0216200E04045 /* Omni-Framework-Release.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = Info.plist;
 				OMNI_BUNDLE_IDENTIFIER = com.omnigroup.framework.OmniBase;
 				PRODUCT_NAME = OmniBase;
@@ -930,6 +948,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4AB8F0F008AD0B7000DBB061 /* Omni-Tool-Release.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OBLoadBundle;
 			};
 			name = AppStore;
@@ -938,6 +957,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 34354D221190BFC700FE1BEB /* Touch-Library-Release.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OmniBase;
 			};
 			name = AppStore;
@@ -950,6 +970,7 @@
 					"$(DEVELOPER_DIR)/Library/Frameworks",
 					"$(value)",
 				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OmniBaseTouchTests;
 			};
 			name = AppStore;
@@ -963,6 +984,7 @@
 					"$(value)",
 				);
 				GCC_PREFIX_HEADER = "Tests/OBUnitTests/OBUnitTests-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "Tests/OBUnitTests/OBUnitTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
@@ -973,6 +995,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4AAFAE1908A0216200E04045 /* Omni-Framework-Debug.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "";
 				OMNI_BUNDLE_IDENTIFIER = com.omnigroup.framework.OmniBase;
@@ -990,6 +1013,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4AAFAE1A08A0216200E04045 /* Omni-Framework-Release.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = Info.plist;
 				OMNI_BUNDLE_IDENTIFIER = com.omnigroup.framework.OmniBase;
 				PRODUCT_NAME = OmniBase;
@@ -1006,6 +1030,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4AAFAE1808A0216200E04045 /* Omni-Framework-Coverage.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = Info.plist;
 				OMNI_BUNDLE_IDENTIFIER = com.omnigroup.framework.OmniBase;
 				PRODUCT_NAME = OmniBase;

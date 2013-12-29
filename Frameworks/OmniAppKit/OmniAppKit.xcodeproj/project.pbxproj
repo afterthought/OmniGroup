@@ -185,7 +185,7 @@
 		4AA1E6CA08AA764600E2FF6B /* OAPreferencesIconView.h in Headers */ = {isa = PBXBuildFile; fileRef = 01563696FFE9F5FAC697A14E /* OAPreferencesIconView.h */; };
 		4AA1E6CB08AA764600E2FF6B /* OAPreferencesToolbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 6620D67A01335CA00097A13E /* OAPreferencesToolbar.h */; };
 		4AA1E6CC08AA764600E2FF6B /* OAPreferencesWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 6620D673013359840097A13E /* OAPreferencesWindow.h */; };
-		4AA1E6CF08AA764600E2FF6B /* OAAquaButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 00E51F9AFE8AB2E911C9CC38 /* OAAquaButton.h */; settings = {ATTRIBUTES = (Public, Project, Private, ); }; };
+		4AA1E6CF08AA764600E2FF6B /* OAAquaButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 00E51F9AFE8AB2E911C9CC38 /* OAAquaButton.h */; settings = {ATTRIBUTES = (Public, Private, Project, ); }; };
 		4AA1E6D008AA764600E2FF6B /* OABackgroundImageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = B5FEDACF055862C20097A10E /* OABackgroundImageControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4AA1E6D108AA764600E2FF6B /* OABrowserCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 00E51F89FE8AB2E911C9CC38 /* OABrowserCell.h */; settings = {ATTRIBUTES = (Public, Private, ); }; };
 		4AA1E6D208AA764600E2FF6B /* OACalendarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 114343E10066D6B4C697A12D /* OACalendarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -222,7 +222,7 @@
 		4AA1E6F708AA764600E2FF6B /* OASwitcherBarMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = B5CBF0810517D86A0097A10E /* OASwitcherBarMatrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4AA1E6F808AA764600E2FF6B /* OASwoopView.h in Headers */ = {isa = PBXBuildFile; fileRef = A2177CD404FEC4FF0097A146 /* OASwoopView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4AA1E6F908AA764600E2FF6B /* OATabbedWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 00E51F93FE8AB2E911C9CC38 /* OATabbedWindowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4AA1E6FA08AA764600E2FF6B /* OATabView.h in Headers */ = {isa = PBXBuildFile; fileRef = 00E51F94FE8AB2E911C9CC38 /* OATabView.h */; settings = {ATTRIBUTES = (Public, Project, Private, ); }; };
+		4AA1E6FA08AA764600E2FF6B /* OATabView.h in Headers */ = {isa = PBXBuildFile; fileRef = 00E51F94FE8AB2E911C9CC38 /* OATabView.h */; settings = {ATTRIBUTES = (Public, Private, Project, ); }; };
 		4AA1E6FB08AA764600E2FF6B /* OATabViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 00E51F95FE8AB2E911C9CC38 /* OATabViewController.h */; settings = {ATTRIBUTES = (Public, Project, ); }; };
 		4AA1E6FC08AA764600E2FF6B /* OATextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 00E51F96FE8AB2E911C9CC38 /* OATextField.h */; settings = {ATTRIBUTES = (Public, Project, ); }; };
 		4AA1E6FD08AA764600E2FF6B /* OATextWithIconCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 010A51C0005212DBC697A13D /* OATextWithIconCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -3223,6 +3223,7 @@
 					"$(DEVELOPER_DIR)/Library/Frameworks",
 					"$(value)",
 				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OmniAppKitTouchTests;
 			};
 			name = Debug;
@@ -3235,6 +3236,7 @@
 					"$(DEVELOPER_DIR)/Library/Frameworks",
 					"$(value)",
 				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OmniAppKitTouchTests;
 			};
 			name = Release;
@@ -3247,6 +3249,7 @@
 					"$(DEVELOPER_DIR)/Library/Frameworks",
 					"$(value)",
 				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OmniAppKitTouchTests;
 			};
 			name = Coverage;
@@ -3255,6 +3258,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3434792611923B69007D0CE5 /* Touch-Library-Debug.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OmniAppKit;
 			};
 			name = Debug;
@@ -3263,6 +3267,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3434792711923B69007D0CE5 /* Touch-Library-Release.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OmniAppKit;
 			};
 			name = Release;
@@ -3271,6 +3276,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3434792511923B69007D0CE5 /* Touch-Library-Coverage.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OmniAppKit;
 			};
 			name = Coverage;
@@ -3286,6 +3292,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4AA1EBD208AA772700E2FF6B /* Omni-Framework-Release.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = Info.plist;
 				OMNI_BUNDLE_IDENTIFIER = com.omnigroup.OmniAppKit;
 				PRODUCT_NAME = OmniAppKit;
@@ -3307,6 +3314,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR_QUOTED)",
 				);
 				GCC_PREFIX_HEADER = Tests/UnitTests/OAUnitTests_Prefix.h;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "Info-OAUnitTests.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(DEVELOPER_FRAMEWORKS_DIR)";
 				PRODUCT_NAME = OAUnitTests;
@@ -3318,6 +3326,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4AA1EBD508AA772700E2FF6B /* Omni-Tool-Release.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OAMakeImageSizeIntegral;
 			};
 			name = AdHoc;
@@ -3335,6 +3344,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3434792711923B69007D0CE5 /* Touch-Library-Release.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OmniAppKit;
 			};
 			name = AdHoc;
@@ -3347,6 +3357,7 @@
 					"$(DEVELOPER_DIR)/Library/Frameworks",
 					"$(value)",
 				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OmniAppKitTouchTests;
 			};
 			name = AdHoc;
@@ -3362,6 +3373,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4AA1EBD208AA772700E2FF6B /* Omni-Framework-Release.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = Info.plist;
 				OMNI_BUNDLE_IDENTIFIER = com.omnigroup.OmniAppKit;
 				PRODUCT_NAME = OmniAppKit;
@@ -3383,6 +3395,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR_QUOTED)",
 				);
 				GCC_PREFIX_HEADER = Tests/UnitTests/OAUnitTests_Prefix.h;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "Info-OAUnitTests.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(DEVELOPER_FRAMEWORKS_DIR)";
 				PRODUCT_NAME = OAUnitTests;
@@ -3394,6 +3407,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4AA1EBD508AA772700E2FF6B /* Omni-Tool-Release.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OAMakeImageSizeIntegral;
 			};
 			name = AppStore;
@@ -3411,6 +3425,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3434792711923B69007D0CE5 /* Touch-Library-Release.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OmniAppKit;
 			};
 			name = AppStore;
@@ -3423,6 +3438,7 @@
 					"$(DEVELOPER_DIR)/Library/Frameworks",
 					"$(value)",
 				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OmniAppKitTouchTests;
 			};
 			name = AppStore;
@@ -3452,6 +3468,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4AA1EBD108AA772700E2FF6B /* Omni-Framework-Debug.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = Info.plist;
 				OMNI_BUNDLE_IDENTIFIER = com.omnigroup.OmniAppKit;
 				PRODUCT_NAME = OmniAppKit;
@@ -3468,6 +3485,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4AA1EBD208AA772700E2FF6B /* Omni-Framework-Release.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = Info.plist;
 				OMNI_BUNDLE_IDENTIFIER = com.omnigroup.OmniAppKit;
 				PRODUCT_NAME = OmniAppKit;
@@ -3484,6 +3502,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4AA1EBD008AA772700E2FF6B /* Omni-Framework-Coverage.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = Info.plist;
 				OMNI_BUNDLE_IDENTIFIER = com.omnigroup.OmniAppKit;
 				PRODUCT_NAME = OmniAppKit;
@@ -3505,6 +3524,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR_QUOTED)",
 				);
 				GCC_PREFIX_HEADER = Tests/UnitTests/OAUnitTests_Prefix.h;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "Info-OAUnitTests.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(DEVELOPER_FRAMEWORKS_DIR)";
 				OMNI_BUNDLE_IDENTIFIER = com.omnigroup.framework.OmniAppKit.OAUnitTests;
@@ -3522,6 +3542,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR_QUOTED)",
 				);
 				GCC_PREFIX_HEADER = Tests/UnitTests/OAUnitTests_Prefix.h;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "Info-OAUnitTests.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(DEVELOPER_FRAMEWORKS_DIR)";
 				OMNI_BUNDLE_IDENTIFIER = com.omnigroup.framework.OmniAppKit.OAUnitTests;
@@ -3539,6 +3560,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR_QUOTED)",
 				);
 				GCC_PREFIX_HEADER = Tests/UnitTests/OAUnitTests_Prefix.h;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "Info-OAUnitTests.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(DEVELOPER_FRAMEWORKS_DIR)";
 				OMNI_BUNDLE_IDENTIFIER = com.omnigroup.framework.OmniAppKit.OAUnitTests;
@@ -3551,6 +3573,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4AA1EBD408AA772700E2FF6B /* Omni-Tool-Debug.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OAMakeImageSizeIntegral;
 			};
 			name = Debug;
@@ -3559,6 +3582,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4AA1EBD508AA772700E2FF6B /* Omni-Tool-Release.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OAMakeImageSizeIntegral;
 			};
 			name = Release;
@@ -3567,6 +3591,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4AA1EBD308AA772700E2FF6B /* Omni-Tool-Coverage.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OAMakeImageSizeIntegral;
 			};
 			name = Coverage;

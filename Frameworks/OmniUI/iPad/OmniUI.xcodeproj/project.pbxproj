@@ -2069,6 +2069,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 346C4A11119326AD00BE8C49 /* Touch-Library-Debug.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OmniUI;
 			};
 			name = Debug;
@@ -2077,6 +2078,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 346C4A12119326AD00BE8C49 /* Touch-Library-Release.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OmniUI;
 			};
 			name = Release;
@@ -2110,6 +2112,7 @@
 					"$(inherited)",
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OmniUI;
 			};
 			name = AdHoc;
@@ -2129,6 +2132,7 @@
 					"$(inherited)",
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OmniUI;
 			};
 			name = AppStore;

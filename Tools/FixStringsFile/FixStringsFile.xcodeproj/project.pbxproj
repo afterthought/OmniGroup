@@ -250,6 +250,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 34C4D6B208C7AB280072D2D6 /* Omni-Tool-Debug.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = FixStringsFile;
 			};
@@ -259,6 +260,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 34C4D6B308C7AB280072D2D6 /* Omni-Tool-Release.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = FixStringsFile;
 			};
@@ -268,6 +270,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 34C4D6B108C7AB280072D2D6 /* Omni-Tool-Coverage.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = FixStringsFile;
 			};
@@ -305,6 +308,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 34C4D6B308C7AB280072D2D6 /* Omni-Tool-Release.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = FixStringsFile;
 			};
@@ -321,6 +325,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 34C4D6B308C7AB280072D2D6 /* Omni-Tool-Release.xcconfig */;
 			buildSettings = {
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = FixStringsFile;
 			};

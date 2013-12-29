@@ -1007,6 +1007,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OFSSync;
 			};
 			name = AppStore;
@@ -1015,6 +1016,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OFSSync;
 			};
 			name = AdHoc;
@@ -1023,6 +1025,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OFSUnitTests;
 			};
 			name = AppStore;
@@ -1031,6 +1034,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OFSUnitTests;
 			};
 			name = AdHoc;
@@ -1039,6 +1043,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OFSUnitTestsTouch;
 			};
 			name = AppStore;
@@ -1047,6 +1052,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OFSUnitTestsTouch;
 			};
 			name = AdHoc;
@@ -1056,6 +1062,7 @@
 			baseConfigurationReference = 3421AE8C0F71F89C0096AADB /* Omni-Framework-Debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = Info.plist;
 				OMNI_BUNDLE_IDENTIFIER = com.omnigroup.framework.OmniFileStore;
 				PRODUCT_NAME = OmniFileStore;
@@ -1068,6 +1075,7 @@
 			baseConfigurationReference = 3421AE8D0F71F89C0096AADB /* Omni-Framework-Release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = Info.plist;
 				OMNI_BUNDLE_IDENTIFIER = com.omnigroup.framework.OmniFileStore;
 				PRODUCT_NAME = OmniFileStore;
@@ -1114,6 +1122,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -1133,6 +1142,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Test/OFSUnitTests/OFSUnitTests-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -1152,6 +1162,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Test/OFSUnitTests/OFSUnitTests-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -1177,6 +1188,7 @@
 			baseConfigurationReference = 3421AE8B0F71F89C0096AADB /* Omni-Framework-Coverage.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = Info.plist;
 				OMNI_BUNDLE_IDENTIFIER = com.omnigroup.framework.OmniFileStore;
 				PRODUCT_NAME = OmniFileStore;
@@ -1191,6 +1203,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_PREFIX_HEADER = "Test/OFSUnitTests/OFSUnitTests-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "Test/OFSUnitTests/OFSUnitTests-Info.plist";
 				OMNI_BUNDLE_IDENTIFIER = com.omnigroup.OFSUnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1205,6 +1218,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_PREFIX_HEADER = "Test/OFSUnitTests/OFSUnitTests-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "Test/OFSUnitTests/OFSUnitTests-Info.plist";
 				OMNI_BUNDLE_IDENTIFIER = com.omnigroup.OFSUnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1219,6 +1233,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_PREFIX_HEADER = "Test/OFSUnitTests/OFSUnitTests-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "Test/OFSUnitTests/OFSUnitTests-Info.plist";
 				OMNI_BUNDLE_IDENTIFIER = com.omnigroup.OFSUnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1232,6 +1247,7 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PREFIX_HEADER = OmniFileStore_Prefix.h;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OFSSync;
 			};
 			name = Debug;
@@ -1242,6 +1258,7 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PREFIX_HEADER = OmniFileStore_Prefix.h;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OFSSync;
 			};
 			name = Release;
@@ -1252,6 +1269,7 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PREFIX_HEADER = OmniFileStore_Prefix.h;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OFSSync;
 			};
 			name = Coverage;
@@ -1261,6 +1279,7 @@
 			baseConfigurationReference = 3421AE9B0F71F89C0096AADB /* Omni-Tool-Debug.xcconfig */;
 			buildSettings = {
 				GCC_PREFIX_HEADER = OmniFileStore_Prefix.h;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = ofs;
 			};
 			name = Debug;
@@ -1270,6 +1289,7 @@
 			baseConfigurationReference = 3421AE9C0F71F89C0096AADB /* Omni-Tool-Release.xcconfig */;
 			buildSettings = {
 				GCC_PREFIX_HEADER = OmniFileStore_Prefix.h;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = ofs;
 			};
 			name = Release;
@@ -1279,6 +1299,7 @@
 			baseConfigurationReference = 3421AE9A0F71F89C0096AADB /* Omni-Tool-Coverage.xcconfig */;
 			buildSettings = {
 				GCC_PREFIX_HEADER = OmniFileStore_Prefix.h;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = ofs;
 			};
 			name = Coverage;
@@ -1288,6 +1309,7 @@
 			baseConfigurationReference = 34D06C65125D203B00CA3963 /* Touch-Library-Debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OmniFileStore;
 			};
 			name = Debug;
@@ -1297,6 +1319,7 @@
 			baseConfigurationReference = 34D06C66125D203B00CA3963 /* Touch-Library-Release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OmniFileStore;
 			};
 			name = Release;
@@ -1306,6 +1329,7 @@
 			baseConfigurationReference = 34D06C64125D203B00CA3963 /* Touch-Library-Coverage.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OmniFileStore;
 			};
 			name = Coverage;
@@ -1322,6 +1346,7 @@
 			baseConfigurationReference = 3421AE8D0F71F89C0096AADB /* Omni-Framework-Release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = Info.plist;
 				OMNI_BUNDLE_IDENTIFIER = com.omnigroup.framework.OmniFileStore;
 				PRODUCT_NAME = OmniFileStore;
@@ -1333,6 +1358,7 @@
 			baseConfigurationReference = 34D06C66125D203B00CA3963 /* Touch-Library-Release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OmniFileStore;
 			};
 			name = AdHoc;
@@ -1342,6 +1368,7 @@
 			baseConfigurationReference = 3421AE9C0F71F89C0096AADB /* Omni-Tool-Release.xcconfig */;
 			buildSettings = {
 				GCC_PREFIX_HEADER = OmniFileStore_Prefix.h;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = ofs;
 			};
 			name = AdHoc;
@@ -1358,6 +1385,7 @@
 			baseConfigurationReference = 3421AE8D0F71F89C0096AADB /* Omni-Framework-Release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = Info.plist;
 				OMNI_BUNDLE_IDENTIFIER = com.omnigroup.framework.OmniFileStore;
 				PRODUCT_NAME = OmniFileStore;
@@ -1369,6 +1397,7 @@
 			baseConfigurationReference = 34D06C66125D203B00CA3963 /* Touch-Library-Release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = OmniFileStore;
 			};
 			name = AppStore;
@@ -1378,6 +1407,7 @@
 			baseConfigurationReference = 3421AE9C0F71F89C0096AADB /* Omni-Tool-Release.xcconfig */;
 			buildSettings = {
 				GCC_PREFIX_HEADER = OmniFileStore_Prefix.h;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = ofs;
 			};
 			name = AppStore;
