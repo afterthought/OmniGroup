@@ -111,6 +111,10 @@ NSString * const OATextStorageDidProcessEditingNotification = @"OATextStorageDid
 
 - (NSDictionary *)attributesAtIndex:(NSUInteger)location effectiveRange:(NSRangePointer)range;
 {
+    //Hack... auto correct shortens the text
+    if (location > [self length]) {
+        location = [self length] - 1;
+    }
     return [_contents attributesAtIndex:location effectiveRange:range];
 }
 
